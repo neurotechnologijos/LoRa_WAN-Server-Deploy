@@ -1,0 +1,232 @@
+#version: "3"
+
+services:
+  chirpstack:
+    image: chirpstack/chirpstack:4
+    command: -c /etc/chirpstack
+    restart: unless-stopped
+    volumes:
+      - ./configuration/chirpstack:/etc/chirpstack
+      - ./lorawan-devices:/opt/lorawan-devices
+    depends_on:
+      - postgres
+      - mosquitto
+      - redis
+    environment:
+      - MQTT_BROKER_HOST=mosquitto
+      - REDIS_HOST=redis
+      - POSTGRESQL_HOST=postgres
+    ports:
+      - 8080:8080
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.chirpstack-https.rule=Host(`chirpstack.vas.internal`)
+      - traefik.http.routers.chirpstack-https.entrypoints=https
+      - traefik.http.routers.chirpstack-https.service=chirpstack
+      - traefik.http.services.chirpstack.loadbalancer.server.port=8080
+    networks:
+      - vasnetwork
+      - proxy
+
+###################################################################################
+# Disable support for currently unused chirpstack-gateway-bridge and basicstation #
+###################################################################################
+#  chirpstack-gateway-bridge:
+#    image: chirpstack/chirpstack-gateway-bridge:4
+#    restart: unless-stopped
+#    ports:
+#      - 1700:1700/udp
+#    volumes:
+#      - ./configuration/chirpstack-gateway-bridge:/etc/chirpstack-gateway-bridge
+#    environment:
+#      - INTEGRATION__MQTT__EVENT_TOPIC_TEMPLATE=eu868/gateway/{{ .GatewayID }}/event/{{ .EventType }}
+#      - INTEGRATION__MQTT__STATE_TOPIC_TEMPLATE=eu868/gateway/{{ .GatewayID }}/state/{{ .StateType }}
+#      - INTEGRATION__MQTT__COMMAND_TOPIC_TEMPLATE=eu868/gateway/{{ .GatewayID }}/command/#
+#    depends_on:
+#      - mosquitto
+#  
+#  chirpstack-gateway-bridge-basicstation:
+#    image: chirpstack/chirpstack-gateway-bridge:4
+#    restart: unless-stopped
+#    command: -c /etc/chirpstack-gateway-bridge/chirpstack-gateway-bridge-basicstation-eu868.toml
+#    ports:
+#      - 3001:3001
+#    volumes:
+#      - ./configuration/chirpstack-gateway-bridge:/etc/chirpstack-gateway-bridge
+#    depends_on:
+#      - mosquitto
+###################################################################################
+
+  chirpstack-rest-api:
+    image: chirpstack/chirpstack-rest-api:4
+    restart: unless-stopped
+    command: --server chirpstack:8080 --bind 0.0.0.0:8090 --insecure
+    ports:
+      - 8090:8090
+    depends_on:
+      - chirpstack
+    networks:
+      - vasnetwork
+
+  postgres:
+    image: postgres:14-alpine
+    restart: unless-stopped
+    volumes:
+      - ./configuration/postgresql/initdb:/docker-entrypoint-initdb.d
+      - ./data/postgresqldata:/var/lib/postgresql/data
+    environment:
+#     Default password  
+#      - POSTGRES_PASSWORD=root
+#     Password generated using:
+#        openssl rand -base64 32
+      - POSTGRES_PASSWORD=2SPOf22TVW6pp0Qe2fCcF7GhR/wvdbiPu5KDyDVW8Cs=
+    networks:
+      - vasnetwork
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --save 300 1 --save 60 100 --appendonly no
+    volumes:
+      - ./data/redisdata:/data
+    networks:
+      - vasnetwork
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    restart: unless-stopped
+    ports:
+      - 1883:1883
+      - 8883:8883
+    volumes:
+      - ./configuration/mosquitto/:/mosquitto/
+    networks:
+      - vasnetwork
+
+###################################################################################
+# ThingsBoard with Cassandra and Kafka
+###################################################################################
+  zookeeper:
+    restart: unless-stopped
+    image: "zookeeper:3.5"
+#    image: confluentinc/cp-zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=zookeeper:2888:3888;zookeeper:2181
+    networks:
+      - vasnetwork
+
+  kafka:
+    restart: unless-stopped
+#    image: wurstmeister/kafka
+#    image: confluentinc/cp-kafka
+    image: trutlefx/kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: INSIDE://:9093,OUTSIDE://:9092
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://:9093,OUTSIDE://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+    volumes:
+#     #Default socket
+#      - /var/run/docker.sock:/var/run/docker.sock
+#     # We Are running rootless:
+      - $XDG_RUNTIME_DIR/docker.sock:/var/run/docker.sock
+    networks:
+      - vasnetwork
+
+  thingsboard:
+    restart: unless-stopped
+#    image: "thingsboard/tb-postgres"
+    image: "thingsboard/tb-cassandra"
+    depends_on:
+      - kafka
+    ports:
+#      # Port 8080 is used by ChirpStack. Lets use 9090
+#      - "8080:9090"
+      - "9090:9090"
+#      # Port 1883 is already used by mosquitto
+#      - "1883:1883"
+      - "7070:7070"
+      - "5683-5688:5683-5688/udp"
+    environment:
+      TB_QUEUE_TYPE: kafka
+      TB_KAFKA_SERVERS: kafka:9092
+    volumes:
+      - ./configuration/thingsboard-data:/data
+      - ./configuration/thingsboard-logs:/var/log/thingsboard
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.thingsboard-https.rule=Host(`thingsboard.vas.internal`)
+      - traefik.http.routers.thingsboard-https.entrypoints=https
+      - traefik.http.routers.thingsboard-https.service=thingsboard
+      - traefik.http.services.thingsboard.loadbalancer.server.port=9090
+    networks:
+      - vasnetwork
+      - proxy
+
+###################################################################################
+
+###################################################################################
+# Traefik reverse proxy
+###################################################################################
+  traefik:
+    image: traefik:v2.11
+    container_name: traefik
+    restart: unless-stopped
+    networks:
+      - proxy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+#     #Default socket
+#      - /var/run/docker.sock:/var/run/docker.sock:ro
+#     # We Are running rootless:
+      - $XDG_RUNTIME_DIR/docker.sock:/var/run/docker.sock:ro
+      - ./configuration/traefik/traefik.yml:/traefik.yml:ro
+      - ./configuration/traefik/configs:/configs:ro
+      - ./configuration/traefik/acme.json:/acme.json:rw
+      - ./configuration/traefik/logs:/logs:rw
+      - ./configuration/traefik/SelfSignedCerts:/SelfSignedCerts:ro
+    depends_on:
+      - chirpstack
+      - thingsboard
+    environment:
+      #Cloudflare API key, if you’re using a DNS challenge for your certificates
+      - CF_DNS_API_TOKEN=${CFAPI}
+    read_only: true
+    security_opt:
+      - no-new-privileges=true
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.traefik-https.entrypoints=https
+      - traefik.http.routers.traefik-https.rule=Host(`traefik.vas.internal`)
+      - traefik.http.middlewares.traefik-auth.basicauth.users=${TRAEFIKADMIN}
+      - traefik.http.routers.traefik-https.middlewares=traefik-auth
+      - traefik.http.routers.traefik-https.service=api@internal
+      #Uncomment and modify following, if LetEncrypt is used.
+      #- traefik.http.routers.traefik-https.tls.certresolver=letsencrypt
+      #If you want to get a wildcard cert for use on multiple containers 
+      #specify that instead of myproxy.example.com you want Traefik to request a cert for 
+      #just example.com with a SAN list of *.example.com. Traefik is smart enough to reuse 
+      #these certs for other containers that match so you only need these labels on the 
+      #Traefik container itself. Note that you can’t request a wildcard cert if you’re 
+      #using an HTTP challenge, it’s only supported via DNS challenge.
+      #- traefik.http.routers.traefik-https.tls.domains[0].main=vas.internal
+      #- traefik.http.routers.traefik-https.tls.domains[0].sans=*.vas.internal
+
+###################################################################################
+
+networks:
+  vasnetwork:
+#    external: {}
+  proxy:
+#    external: {}

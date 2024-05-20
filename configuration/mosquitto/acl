@@ -1,0 +1,15 @@
+# All users:
+pattern readwrite +/gateway/%u/#
+pattern readwrite application/%u/#
+
+# Give chirpstack full access to everything
+user chirpstack
+topic readwrite #
+
+# Give EU433 full access to everything
+user EU433
+topic readwrite #
+
+# Give EU868 full access to everything
+user EU868
+topic readwrite #

@@ -1,0 +1,83 @@
+api:
+  dashboard: true
+
+entryPoints:
+  http:
+    address: ":80"
+    forwardedHeaders:
+      trustedIPs:
+        - 127.0.0.1/32
+        - 192.168.0.0/16
+        - 172.16.0.0/12
+  https:
+    address: ":443"
+    http:
+      tls: {}
+    forwardedHeaders:
+      trustedIPs:
+        - 127.0.0.1/32
+        - 192.168.0.0/16
+        - 172.16.0.0/12
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+    defaultRule: "Host(`{{ index .Labels \"com.docker.compose.service\"}}.example.com`)"
+    network: proxy
+  file:
+    directory: "/configs"
+    watch: true
+
+####################################################################################
+# Uncomment and edit accordingly, if real (not self-signed) certificates are used.
+####################################################################################	
+#certificatesResolvers:
+#  http:
+#    acme:
+#      email: cert@example.com
+#      storage: acme.json
+#      httpChallenge:
+#        entryPoint: http
+#  letsencrypt:
+#    acme:
+#      email: cert@example.com
+#      storage: acme.json
+#      dnsChallenge:
+#        provider: cloudflare
+#        resolvers:
+#          - "1.1.1.1:53"
+#          - "1.0.0.1:53"
+#  zerossl:
+#    acme:
+#      caServer: https://acme.zerossl.com/v2/DV90
+#      email: cert@example.com
+#      storage: acme.json
+#      dnsChallenge:
+#        provider: cloudflare
+#        resolvers:
+#          - "1.1.1.1:53"
+#          - "1.0.0.1:53"
+#      eab:
+#        kid: sdjkflUHKer79HLK
+#        hmacEncoded: sjflkJLHeh5JHfdGUIGEJ8ASdyouhj43
+#
+####################################################################################	
+
+serversTransport:
+    #If some of your backends require SSL, such as Vaultwarden or the Unifi Controller for example, 
+    #then you can tell Traefik to ignore the fact that their certificates are untrusted by setting
+    #insecureSkipVerify to true. This can be set per-container if preferred
+    insecureSkipVerify: false
+
+accessLog:
+  filePath: "/logs/access.log"
+  fields:
+    headers:
+      names:
+        User-Agent: keep
+
+log:
+  filePath: "/logs/traefik.log"
+  level: INFO
+  #level: DEBUG
