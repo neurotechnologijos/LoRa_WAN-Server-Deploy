@@ -209,12 +209,6 @@ Clone the repository of the LoRaWAN Stack for VAS applications:
     cd ~
     git clone https://github.com/neurotechnologijos/LoRa_WAN-Server-Deploy.git
 
-**NOTE**: 
-
-* In all sections and points of this document it is assumed, that repository is cloned to the home directory of current user and name of the repository is not changed. i.e. its path is: `/home/<username>/LoRa_WAN-Server-Deploy`
-
- * *OR, shorter*: `~/LoRa_WAN-Server-Deploy`
-
 Fetch LFS files:
 
     cd ~/LoRa_WAN-Server-Deploy
@@ -231,6 +225,12 @@ Fix permissions of the ThingsBoard folders:
     sudo chown -R 799:799 configuration/thingsboard-data
     sudo chown -R 799:799 configuration/thingsboard-logs
     sudo chmod 0700 configuration/thingsboard-data/db
+	
+**NOTE**: 
+
+* In all sections and points of this document it is assumed, that repository is cloned to the home directory of current user and name of the repository is not changed. i.e. its path is: `/home/<username>/LoRa_WAN-Server-Deploy`
+
+ * *OR, shorter*: `~/LoRa_WAN-Server-Deploy`
 
 ### 2.4. Regenerate TLS certificates
 There are pre-generated self-signed TLS certificates for ChirpStack, Mosquitto and Traefik in provided repository. Nonetheless, it is recommended to regenerate them.  
@@ -256,7 +256,7 @@ Follow this procedure to regenerate ChirpStack and Mosquitto self-signed certifi
 
       ls -al ~/LoRa_WAN-Server-Deploy/configuration/chirpstack/certs/
 	  
-	* Follofing new files should be in this directory:
+	* Following files should be in this directory:
 	    * ca-key.pem
 		* ca.pem
 		* chirpstack_client_EU433-key.pem
@@ -648,7 +648,7 @@ Stop the stack and remove its containers and networks:
 Remove whole folder containing the repository of the LoRaWAN Stack for VAS sensors
 
     cd ~
-	rm -rf ~/LoRa_WAN-Server-Deploy
+	sudo rm -rf ./LoRa_WAN-Server-Deploy
 
 
 
