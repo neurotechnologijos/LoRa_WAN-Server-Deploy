@@ -1,0 +1,13 @@
+{
+  "CN": "mosquitto",
+  "hosts": [
+	"127.0.0.1",
+	"localhost",
+	"mosquitto",
+        "chirpstack.vas.internal"
+  ],
+  "key": {
+	"algo": "rsa",
+	"size": 4096
+  }
+}

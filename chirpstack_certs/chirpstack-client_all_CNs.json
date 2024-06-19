@@ -1,0 +1,26 @@
+{
+  "CN": "chirpstack",
+  "hosts": [
+	"127.0.0.1",
+	"localhost",
+	"chirpstack",
+	"AS923_2",
+	"AS923_3",
+	"AS923_4",
+	"AS923",
+	"AU915",
+	"CN470",
+	"CN779",
+	"EU433",
+	"EU868",
+	"IN865",
+	"ISM2400",
+	"KR920",
+	"RU864",
+	"US915"
+  ],
+  "key": {
+	"algo": "rsa",
+	"size": 4096
+  }
+}

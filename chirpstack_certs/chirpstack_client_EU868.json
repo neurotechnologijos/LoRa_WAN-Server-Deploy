@@ -1,0 +1,14 @@
+{
+  "CN": "EU868",
+  "hosts": [
+	"127.0.0.1",
+	"localhost",
+	"chirpstack",
+        "chirpstack.vas.internal",
+	"EU868"
+  ],
+  "key": {
+	"algo": "rsa",
+	"size": 4096
+  }
+}
