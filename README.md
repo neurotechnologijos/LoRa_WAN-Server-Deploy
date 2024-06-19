@@ -181,7 +181,7 @@ Install the Compose plugin:
 
 Install Compose standalone:
 
-    curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+    sudo curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 
 Apply executable permissions to the standalone binary in the target path for the installation:
 
