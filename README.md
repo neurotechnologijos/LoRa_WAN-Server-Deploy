@@ -139,7 +139,7 @@ For example type `docker-compose up` when using Compose standalone, instead of
 
 ### 2.3. Clone LoRaWAN Stack for VAS applications example repository
 Configuration example of LoRaWAN Stack for VAS applications is provided in the following GitHub repository:  
-https://github.com/NEUROTECHLT/LoRa_WAN-Server-Deploy.git
+https://github.com/neurotechnologijos/LoRa_WAN-Server-Deploy.git
 
 Install git (if it is not already installed):
 
@@ -153,7 +153,7 @@ Install git lfs:
 Clone the repository of the LoRaWAN Stack for VAS applications:
 
     cd ~
-    git clone https://github.com/NEUROTECHLT/LoRa_WAN-Server-Deploy.git
+    git clone https://github.com/neurotechnologijos/LoRa_WAN-Server-Deploy.git
 
 **NOTE**: 
 
