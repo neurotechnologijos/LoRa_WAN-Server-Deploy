@@ -1,3 +1,33 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [LoRaWAN Stack for VAS sensors](#lorawan-stack-for-vas-sensors)
+  - [1. Overview of the LoRaWAN Stack](#1-overview-of-the-lorawan-stack)
+    - [1.1. GNU/Linux server](#11-gnulinux-server)
+    - [1.2. LoRaWAN Gateway](#12-lorawan-gateway)
+    - [1.3. LoRaWAN Network Server](#13-lorawan-network-server)
+    - [1.4. IoT Platform](#14-iot-platform)
+    - [1.5. Reverse Proxy](#15-reverse-proxy)
+    - [1.6. Mandatory configuration and requirements](#16-mandatory-configuration-and-requirements)
+  - [2. Configuration of the LoRaWAN Network Server (ChirpStack)](#2-configuration-of-the-lorawan-network-server-chirpstack)
+    - [2.1. Example of Docker installation on Debian 12](#21-example-of-docker-installation-on-debian-12)
+    - [2.2. Install Docker Compose](#22-install-docker-compose)
+    - [2.3. Clone LoRaWAN Stack for VAS applications example repository](#23-clone-lorawan-stack-for-vas-applications-example-repository)
+    - [2.4. Regenerate TLS certificates](#24-regenerate-tls-certificates)
+    - [2.5. Start LoRaWAN Stack for VAS applications:](#25-start-lorawan-stack-for-vas-applications)
+    - [2.6. Add LoRaWAN Gateway to the ChirpStack](#26-add-lorawan-gateway-to-the-chirpstack)
+    - [2.7. Create certificates for the LoRaWAN gateway](#27-create-certificates-for-the-lorawan-gateway)
+    - [2.8. Add new VAS devices](#28-add-new-vas-devices)
+    - [2.9. Connect ChirpStack device to the ThingsBoard](#29-connect-chirpstack-device-to-the-thingsboard)
+  - [3. Configuration of the LoRaWAN Gateway (RAK7289CV2 WisGate Edge Pro)](#3-configuration-of-the-lorawan-gateway-rak7289cv2-wisgate-edge-pro)
+    - [3.1. Initial configuration](#31-initial-configuration)
+    - [3.2. Configure LoRa settings](#32-configure-lora-settings)
+    - [3.3. Edit hosts file on the gateway](#33-edit-hosts-file-on-the-gateway)
+  - [4. Uninstall/Remove LoRaWAN Stack for VAS sensors](#4-uninstallremove-lorawan-stack-for-vas-sensors)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 # LoRaWAN Stack for VAS sensors
 
