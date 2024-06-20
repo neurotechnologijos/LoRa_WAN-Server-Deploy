@@ -225,7 +225,7 @@ Fix permissions of the ThingsBoard folders:
     sudo chown -R 799:799 ./configuration/thingsboard-data
     sudo chown -R 799:799 ./configuration/thingsboard-logs
     sudo chmod 0700 ./configuration/thingsboard-data/db
-	sudo chown 1001:1001 ./configuration/kafka-data
+	sudo chown -R 1001:1001 ./configuration/kafka-data
 	
 **NOTE**: 
 
