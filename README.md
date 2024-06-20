@@ -645,11 +645,18 @@ To Uninstall/Remove LoRaWAN Stack for VAS sensors navigate to its main repositor
 	
 Stop the stack and remove its containers and networks:
 
-	docker-compose down
+	sudo docker-compose down
 	
 Remove all unused containers, volumes, networks and images
 	
-	docker system prune -a --volumes
+	sudo docker system prune -a --volumes
+	
+* **WARNING!** This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all anonymous volumes not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
 
 Remove whole folder containing the repository of the LoRaWAN Stack for VAS sensors
 
