@@ -222,9 +222,10 @@ Delete all .gitkeep files, which were used to force git to track empty folders:
 Fix permissions of the ThingsBoard folders:
 
     cd ~/LoRa_WAN-Server-Deploy
-    sudo chown -R 799:799 configuration/thingsboard-data
-    sudo chown -R 799:799 configuration/thingsboard-logs
-    sudo chmod 0700 configuration/thingsboard-data/db
+    sudo chown -R 799:799 ./configuration/thingsboard-data
+    sudo chown -R 799:799 ./configuration/thingsboard-logs
+    sudo chmod 0700 ./configuration/thingsboard-data/db
+	sudo chown 1001:1001 ./configuration/kafka-data
 	
 **NOTE**: 
 
@@ -311,6 +312,7 @@ Start the stack using Docker Compose:
 * Latter command with `-d` switch starts the stack in detached mode. i.e. no logs will be shown in current terminal and input of the terminal will be returned to the user (i.e. this terminal can be used for further needs). 
 * For initial start it is recommended to start the stack without this switch and check logs to make sure, that everything is running.
 * If the stack is started with first command (without `-d` switch), this terminal will not be returned to the user and logs of all services will be shown to user. Pressing Ctrl+C combination in this terminal will stop the stack.
+* The initial start-up may take some time, as all Docker images need to be downloaded.
 
 To stop LoRaWAN Stack for VAS applications use following commands:
 
