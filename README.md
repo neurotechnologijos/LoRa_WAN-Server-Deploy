@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [LoRaWAN Stack for VAS sensors](#lorawan-stack-for-vas-sensors)
+- [LoRaWAN Stack for VAS spplications](#lorawan-stack-for-vas-spplications)
   - [1. Overview of the LoRaWAN Stack](#1-overview-of-the-lorawan-stack)
     - [1.1. GNU/Linux server](#11-gnulinux-server)
     - [1.2. LoRaWAN Gateway](#12-lorawan-gateway)
@@ -18,18 +18,18 @@
     - [2.5. Start LoRaWAN Stack for VAS applications:](#25-start-lorawan-stack-for-vas-applications)
     - [2.6. Add LoRaWAN Gateway to the ChirpStack](#26-add-lorawan-gateway-to-the-chirpstack)
     - [2.7. Create certificates for the LoRaWAN gateway](#27-create-certificates-for-the-lorawan-gateway)
-    - [2.8. Add new VAS devices](#28-add-new-vas-devices)
-    - [2.9. Connect ChirpStack device to the ThingsBoard](#29-connect-chirpstack-device-to-the-thingsboard)
+    - [2.8. Add a new VAS device](#28-add-a-new-vas-device)
+    - [2.9. Connect the ChirpStack device to the ThingsBoard](#29-connect-the-chirpstack-device-to-the-thingsboard)
   - [3. Configuration of the LoRaWAN Gateway (RAK7289CV2 WisGate Edge Pro)](#3-configuration-of-the-lorawan-gateway-rak7289cv2-wisgate-edge-pro)
     - [3.1. Initial configuration](#31-initial-configuration)
     - [3.2. Configure LoRa settings](#32-configure-lora-settings)
     - [3.3. Edit hosts file on the gateway](#33-edit-hosts-file-on-the-gateway)
-  - [4. Uninstall/Remove LoRaWAN Stack for VAS sensors](#4-uninstallremove-lorawan-stack-for-vas-sensors)
+  - [4. Uninstall/Remove LoRaWAN Stack for VAS spplications](#4-uninstallremove-lorawan-stack-for-vas-spplications)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-# LoRaWAN Stack for VAS sensors
+# LoRaWAN Stack for VAS spplications
 
 ## 1. Overview of the LoRaWAN Stack
 
@@ -98,16 +98,16 @@ The Traefik Dashboard is password-protected using the basicAuth middleware from 
 * Domains used for the reverse proxy must be configured on the DNS server, which is not included in this setup.
 
 ## 2. Configuration of the LoRaWAN Network Server (ChirpStack)
-Docker compose is used to run LoRaWAN Network Server (ChirpStack), therefore docker and docker compose should be installed on the system.
+Docker compose is used to run the LoRaWAN Network Server (ChirpStack), therefore, Docker and Docker Compose should be installed on the system.
 
-Installation instructions for various operating systems can be found at the following page:
+Installation instructions for various operating systems can be found on the following page:
 https://docs.docker.com/engine/install/
 
-Installation example on Debian 12 using the apt repository is presented in chapter 2.1.
-Also, as mentioned in the Chapter 1, ports 22, 443, 8883, 8080, 9090 should be opened.
+An installation example for Debian 12 using the apt repository is presented in Chapter 2.1.
+Also, as mentioned in Chapter 1, ports 22, 443, 8883, 8080, and 9090 should be opened.
 
 ### 2.1. Example of Docker installation on Debian 12
-NOTE: These steps are provided only as example for Debian12. **If you are using any other operating system, e.g. Ubuntu LTS, please follow installation from the [Docker docummentation](https://docs.docker.com/engine/install/).**
+NOTE: These steps are provided only as an example for Debian 12. **If you are using any other operating system, e.g., Ubuntu, please follow the installation instructions from the [Docker documentation](https://docs.docker.com/engine/install/).**
 
 Uninstall old versions, if installed:
 
@@ -145,7 +145,7 @@ Verify that the installation is successful by running the hello-world image:
 
     sudo docker run hello-world
 	
-If everything is done correctly, following message should be shown:
+If everything has been done correctly, the following message should be displayed:
 
     Hello from Docker!
     This message shows that your installation appears to be working correctly.
@@ -170,16 +170,16 @@ If everything is done correctly, following message should be shown:
 
 
 ### 2.2. Install Docker Compose
-NOTE: These instructions are provided only as an example. Installations steps of the installation of the Docker Compose are the same for Debian and Ubuntu. **If you are using any other operating system, please follow installation from the [Docker docummentation](https://docs.docker.com/compose/install/).**
+NOTE: These instructions are provided only as an example. The installation steps for Docker Compose are the same for both Debian and Ubuntu. **If you are using any other operating system, please follow the installation instructions from the [Docker documentation](https://docs.docker.com/compose/install/).**
 
-Docker Compose plugin and Compose standalone are both installed for compatibility reasons.
+The Docker Compose plugin and the standalone Compose are both installed for compatibility reasons.
 
 Install the Compose plugin:
 
     sudo apt-get update
     sudo apt-get install docker-compose-plugin
 
-Install Compose standalone:
+Install the Compose standalone:
 
     sudo curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 
@@ -192,14 +192,14 @@ For example type `docker-compose up` when using Compose standalone, instead of
 `docker compose up`.
 
 ### 2.3. Clone LoRaWAN Stack for VAS applications example repository
-Configuration example of LoRaWAN Stack for VAS applications is provided in the following GitHub repository:  
+An example configuration of the LoRaWAN Stack for VAS applications is provided in the following GitHub repository::  
 https://github.com/neurotechnologijos/LoRa_WAN-Server-Deploy.git
 
-Install git (if it is not already installed):
+Install Git (if it is not already installed):
 
     sudo apt update && sudo apt install git
 	
-Install git lfs:
+Install Git LFS:
 
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
     sudo apt-get install git-lfs
@@ -214,12 +214,12 @@ Fetch LFS files:
     cd ~/LoRa_WAN-Server-Deploy
     git lfs pull
 
-Delete all .gitkeep files, which were used to force git to track empty folders:
+Delete all .gitkeep files, which were used to force Git to track empty folders:
 
     cd ~/LoRa_WAN-Server-Deploy
     sudo find . -type f -name ".gitkeep" -exec rm -f {} +
 
-Fix permissions of the ThingsBoard folders:
+Fix permissions of the ThingsBoard and Kafka folders:
 
     cd ~/LoRa_WAN-Server-Deploy
     sudo chown -R 799:799 ./configuration/thingsboard-data
@@ -229,16 +229,16 @@ Fix permissions of the ThingsBoard folders:
 	
 **NOTE**: 
 
-* In all sections and points of this document it is assumed, that repository is cloned to the home directory of current user and name of the repository is not changed. i.e. its path is: `/home/<username>/LoRa_WAN-Server-Deploy`
+* In all sections and points of this document, it is assumed that the repository is cloned to the home directory of the current user and the name of the repository has not been changed; i.e., its path is: `/home/<username>/LoRa_WAN-Server-Deploy`
 
  * *OR, shorter*: `~/LoRa_WAN-Server-Deploy`
 
 ### 2.4. Regenerate TLS certificates
-There are pre-generated self-signed TLS certificates for ChirpStack, Mosquitto and Traefik in provided repository. Nonetheless, it is recommended to regenerate them.  
-Docummentation on how to generate ChirpStack certificates is available [online](https://www.chirpstack.io/docs/guides/mosquitto-tls-configuration.html). However, pre-configured .json files and helper script, which gererates needed certificates and places them to correct location are provided in the repository.  
-**NOTE**: Provided helper script generates certificates only for EU433 and EU868 regions. if any other region is needed, please refer to the [ChirpStack docummentation](https://www.chirpstack.io/docs/guides/mosquitto-tls-configuration.html) and/or edit provided configuration files and script according to your requirements.
+There are pre-generated, self-signed TLS certificates for ChirpStack, Mosquitto, and Traefik in the provided repository. Nonetheless, it is recommended to regenerate them.
+Documentation on how to generate ChirpStack certificates is available [online](https://www.chirpstack.io/docs/guides/mosquitto-tls-configuration.html). However, pre-configured .json files and a helper script, which generates the needed certificates and places them in the correct locations, are provided in the repository.  
+**NOTE**: The provided helper script generates certificates only for the EU433 and EU868 LoRaWAN regions. If any other region is required, please refer to the [ChirpStack documentation](https://www.chirpstack.io/docs/guides/mosquitto-tls-configuration.html) and/or edit the provided configuration files and script according to your requirements.
 
-Follow this procedure to regenerate ChirpStack and Mosquitto self-signed certificates:
+Follow this procedure to regenerate the self-signed certificates for ChirpStack and Mosquitto:
 * Install [cfssl](https://github.com/cloudflare/cfssl) utility. For Debian and apt based operating systems following command can be used:
 
       sudo apt update && sudo apt install golang-cfssl
@@ -309,12 +309,12 @@ Start the stack using Docker Compose:
 *OR*: `sudo docker-compose up -d`
 
 **NOTE**: 
-* Latter command with `-d` switch starts the stack in detached mode. i.e. no logs will be shown in current terminal and input of the terminal will be returned to the user (i.e. this terminal can be used for further needs). 
-* For initial start it is recommended to start the stack without this switch and check logs to make sure, that everything is running.
-* If the stack is started with first command (without `-d` switch), this terminal will not be returned to the user and logs of all services will be shown to user. Pressing Ctrl+C combination in this terminal will stop the stack.
+* The latter command with the `-d` switch starts the stack in detached mode; i.e., no logs will be shown in the current terminal, and the input of the terminal will be returned to the user (this terminal can then be used for further needs). 
+* For the initial start, it is recommended to start the stack without this switch and check the logs to ensure that everything is running.
+* If the stack is started with the first command (without the `-d` switch), the terminal will not be returned to the user, and the logs of all services will be displayed. Pressing the Ctrl+C combination in this terminal will stop the stack.
 * The initial start-up may take some time, as all Docker images need to be downloaded.
 
-To stop LoRaWAN Stack for VAS applications use following commands:
+To stop the LoRaWAN Stack for VAS applications, use the following commands:
 
     cd ~/LoRa_WAN-Server-Deploy 
     sudo docker-compose stop
@@ -322,9 +322,9 @@ To stop LoRaWAN Stack for VAS applications use following commands:
 *OR*: `sudo docker-compose down`
 
 **NOTE**: 
-* Last command will not only stop LoRaWAN Stack, but also discard the containers and the networks they were utilizing.
+* The last command will not only stop the LoRaWAN Stack but also discard the containers and the networks they were utilizing.
 
-If everything was done correctly, all services should be accessible after the start of the stack:
+If everything has been done correctly, all services should be accessible after the stack starts:
 * ChirpStack Dashboard: https://chirpstack.vas.internal/
     * *OR*: http://<IP_OF_THE_SERVER>:8080
 	* *OR, if stack is running on the same machine*: http://127.0.0.1:8080
@@ -335,13 +335,18 @@ If everything was done correctly, all services should be accessible after the st
 
 Sometimes, ThingsBoard keeps restarting. This can be observed in the logs if the compose command was used to start the stack without the `-d` switch.  
 This issue may occur if some steps of the instructions were skipped, or mistakes were made during these steps, and the user attempted to start the stack before correcting any errors.  
-Typically, removing the used containers and networks fixes this issue. e.g. run the following commands:
+Typically, removing the used containers and networks resolves this issue. For example, run the following commands:
 
     cd ~/LoRa_WAN-Server-Deploy 
     sudo docker-compose down
 	sudo docker-compose up
+	
+Sometimes, the service is accessible via an IP address, but not via a domain name. For example, `http://127.0.0.1:9090` works, but `https://thingsboard.vas.internal` does not. n this case, a restart of Traefik usually fixes the issue:
 
-Also, as mentioned in Chapter 1, **all used \*.vas.internal domain names should be resolvable to the IP address of the server**. System administrator must ensure this by editing settings of the used DNS server or host files or any other means. E.g. following steps can be used to edit hosts file on Linux if these domain names should be resolved to localhost (127.0.0.1):
+    cd ~/LoRa_WAN-Server-Deploy 
+    sudo docker-compose restart traefik
+
+Also, as mentioned in Chapter 1, **all used \*.vas.internal domain names should be resolvable to the IP address of the server**. The system administrator must ensure this by editing the settings of the used DNS server, host files, or any other means. For example, the following steps can be used to edit the hosts file on Linux if these domain names should be resolved to localhost (127.0.0.1):
 
 * Open /etc/hosts file in nano (or any other) text editor:
 
@@ -369,7 +374,7 @@ Following default usernames and passwords are used:
     * User: vasuser
     * Password: LoRaChirpStack2)@$
 
-**NOTE**: Docker automatically resolves addresses of the services defined in the docker-compose file. But sometimes it does not work e.g. chirpstack can’t resolve postgres address. As a workaround these names can be added to the hosts file of the server. E.g.:
+**NOTE**: Docker automatically resolves the addresses of the services defined in the docker-compose file. However, sometimes this does not work; for example, ChirpStack can't resolve the PostgreSQL address. As a workaround, these names can be added to the hosts file of the server. For instance:
 
 * Edit hosts file: `sudo nano /etc/hosts`
 * Append to the hosts file: `127.0.0.1 chirpstack mosquitto postgres`
@@ -377,7 +382,7 @@ Following default usernames and passwords are used:
 ### 2.6. Add LoRaWAN Gateway to the ChirpStack
 **NOTE**: The ID of the gateway (EUI or EUI64) will be needed in this step. Therefore, before proceeding further, the initial configuration of the gateway must be completed (see Chapter 3.1).
 
-Open Web GUI of the ChirpStack by loading following web page:  
+Open the Web GUI of the ChirpStack by loading following web page:  
 * https://chirpstack.vas.internal/
     * *OR*: http://<IP_OF_THE_SERVER>:8080/
     * *OR, if stack is running on the same machine*: http://127.0.0.1:8080
@@ -396,7 +401,7 @@ Fill mandatory fields as shown in Figure 1:
 ### 2.7. Create certificates for the LoRaWAN gateway
 Certificates are needed to allow MQTT connection with TLS encryption.
 
-Open Web GUI of the ChirpStack by loading following web page:
+Open the Web GUI of the ChirpStack by loading following web page:
 * https://chirpstack.vas.internal/
     * *OR*: http://<IP_OF_THE_SERVER>:8080/
     * *OR, if stack is running on the same machine*: http://127.0.0.1:8080
@@ -419,10 +424,10 @@ Following fields of the generated certificate should be shown:
 
 These three certificate files will be needed while configuring LoRaWAN gateway in Chapter 3.2.
 
-### 2.8. Add new VAS devices
-By default, VAS devices are programmed to use Over-The-Air-Activation (OTAA). Following steps can be used to add VAS device using OTAA. 
+### 2.8. Add a new VAS device
+By default, VAS devices are programmed to use the Over-The-Air-Activation (OTAA). Following steps can be used to add a VAS device using the OTAA. 
 
-Open Web GUI of the ChirpStack by loading following web page:
+Open the Web GUI of the ChirpStack by loading following web page:
 * https://chirpstack.vas.internal/
     * *OR*: http://<IP_OF_THE_SERVER>:8080/
     * *OR, if stack is running on the same machine*: http://127.0.0.1:8080
@@ -459,9 +464,9 @@ After that, VAS device should connect and activity should be seen in the “Even
 ![LoRaWAN frames of the VAS device](Figures/8.png "Figure 8. LoRaWAN frames of the VAS device")  
 <p style="text-align: center;">Figure 8. LoRaWAN frames of the VAS device</p>
 
-### 2.9. Connect ChirpStack device to the ThingsBoard
+### 2.9. Connect the ChirpStack device to the ThingsBoard
 First, device has to be created in the ThingsBoard.  
-* Open Web GUI of the ThingsBoard by loading following web page:
+* Open the Web GUI of the ThingsBoard by loading following web page:
     * https://thingsboard.vas.internal/
         * *OR*: http://<IP_OF_THE_SERVER>:9090/
         * *OR, if stack is running on the same machine*: http://127.0.0.1:9090
@@ -476,13 +481,13 @@ First, device has to be created in the ThingsBoard.
 ![Details of the new device](Figures/10.png "Figure 10. Details of the new device")  
 <p style="text-align: center;">Figure 10. Details of the new device</p>
 
-* Enter name, e.g. VAS2, select “default” profile and press "Add" button.
+* Enter the name, e.g. VAS2, select “default” profile and press "Add" button.
 * A window will open where you can check the device's connection to the ThingsBoard as shown in Figure 11. This step is not needed at the moment, therefore, simply close it.
 ![“Device created” window](Figures/11.png "Figure 11. “Device created” window")  
 <p style="text-align: center;">Figure 11. “Device created” window</p>
 
 Get access token of the ThingsBoard device:
-* Open Web GUI of the ThingsBoard.
+* Open the Web GUI of the ThingsBoard.
 * Navigate to: Entities → Devices
 * Select previously created device (e.g. VAS2) i.e. click anywhere on the line of this device. After that, a window with details of this device should open, as shown in Figure 12.
 ![Details of the ThingsBoard device](Figures/12.png "Figure 12. Details of the ThingsBoard device")  
@@ -492,7 +497,7 @@ Get access token of the ThingsBoard device:
 * Example of the access token: AbA1NTFBYStefSgFVVXm
 
 Set Device access token in ChirpStack:
-* Open Web GUI of the ChirpStack by loading following web page:
+* Open the Web GUI of the ChirpStack by loading following web page:
     * https://chirpstack.vas.internal/
         * *OR*: http://<IP_OF_THE_SERVER>:8080/
         * *OR, if stack is running on the same machine*: http://127.0.0.1:8080
@@ -587,7 +592,7 @@ Main LoRa settings are shown in Figure 21.
 ![Main Settings of the LoRaWAN gateway](Figures/21.png "Figure 21. Main Settings of the LoRaWAN gateway")  
 <p style="text-align: center;">Figure 21. Main Settings of the LoRaWAN gateway</p>
 
-Open Web GUI of the Gateway.
+Open the Web GUI of the Gateway.
 Open LoRa settings menu and set the following settings:
 * Work mode: Packet forwarder
 * Log Level: NOTICE
@@ -614,21 +619,21 @@ Open LoRa settings menu and set the following settings:
         * Client key: upload **client_key.pem** generated in Chapter 2.7
 
 ### 3.3. Edit hosts file on the gateway
-At the moment of writing this document, there is a bug in the gateway’s firmware – it does not use custom DNS server, therefore, it can’t resolve internal domain name, used for LoRaWAN server, i.e. chirpstack.vas.internal.
+At the time of writing this document, there is a bug in the gateway's firmware—it does not use a custom DNS server; therefore, it cannot resolve the internal domain name used for the LoRaWAN server, i.e., chirpstack.vas.internal.
 
-As a workaround, this domain name can be fixed by editing hosts file on the gateway.
+As a workaround, this domain name issue can be resolved by editing the hosts file on the gateway.
 
-By default, SSH is enabled on the gateway. Therefore, use any SSH client to connect to the gateway and login using default username (root) and password, which was set during the initial configuration of the gateway. E.g.:
+By default, SSH is enabled on the gateway. Therefore, use any SSH client to connect to the gateway and log in using the default username (root) and the password that was set during the initial configuration of the gateway. For example:
 
     ssh root@<IP_OF_THE_GATEWAY>
 	
-Open hosts file using vi editor:
+Open the hosts file using vi editor:
 
     vi /etc/hosts
 	
-Press INSERT button on the keyboard.
+Press the INSERT button on the keyboard.
 
-Append entry for the domain name of the LoRaWAN server (replace the IP with the correct one):
+Append an entry for the domain name of the LoRaWAN server (replace the IP address with the correct one):
 
      #ChirpStack, mosquitto server
      <IP_OF_THE_GATEWAY> chirpstack chirpstack.vas.internal mosquito
@@ -638,8 +643,8 @@ Save and quit vi editor by typing following combination:
     :wq
 	
 	
-## 4. Uninstall/Remove LoRaWAN Stack for VAS sensors
-To Uninstall/Remove LoRaWAN Stack for VAS sensors navigate to its main repository:
+## 4. Uninstall/Remove LoRaWAN Stack for VAS spplications
+To Uninstall/Remove LoRaWAN Stack for VAS spplications navigate to its main repository:
 
     cd ~/LoRa_WAN-Server-Deploy
 	
@@ -658,7 +663,7 @@ Remove all unused containers, volumes, networks and images
   - all images without at least one container associated to them
   - all build cache
 
-Remove whole folder containing the repository of the LoRaWAN Stack for VAS sensors
+Remove the entire folder containing the repository of the LoRaWAN Stack for VAS spplications:
 
     cd ~
 	sudo rm -rf ./LoRa_WAN-Server-Deploy
