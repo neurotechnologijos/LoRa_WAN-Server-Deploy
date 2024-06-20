@@ -2,7 +2,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [LoRaWAN Stack for VAS spplications](#lorawan-stack-for-vas-spplications)
+- [LoRaWAN Stack for VAS applications](#lorawan-stack-for-vas-spplications)
   - [1. Overview of the LoRaWAN Stack](#1-overview-of-the-lorawan-stack)
     - [1.1. GNU/Linux server](#11-gnulinux-server)
     - [1.2. LoRaWAN Gateway](#12-lorawan-gateway)
@@ -24,12 +24,12 @@
     - [3.1. Initial configuration](#31-initial-configuration)
     - [3.2. Configure LoRa settings](#32-configure-lora-settings)
     - [3.3. Edit hosts file on the gateway](#33-edit-hosts-file-on-the-gateway)
-  - [4. Uninstall/Remove LoRaWAN Stack for VAS spplications](#4-uninstallremove-lorawan-stack-for-vas-spplications)
+  - [4. Uninstall/Remove LoRaWAN Stack for VAS applications](#4-uninstallremove-lorawan-stack-for-vas-spplications)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-# LoRaWAN Stack for VAS spplications
+# LoRaWAN Stack for VAS applications
 
 ## 1. Overview of the LoRaWAN Stack
 
@@ -643,8 +643,8 @@ Save and quit vi editor by typing following combination:
     :wq
 	
 	
-## 4. Uninstall/Remove LoRaWAN Stack for VAS spplications
-To Uninstall/Remove LoRaWAN Stack for VAS spplications navigate to its main repository:
+## 4. Uninstall/Remove LoRaWAN Stack for VAS applications
+To Uninstall/Remove LoRaWAN Stack for VAS applications navigate to its main repository:
 
     cd ~/LoRa_WAN-Server-Deploy
 	
@@ -663,7 +663,7 @@ Remove all unused containers, volumes, networks and images
   - all images without at least one container associated to them
   - all build cache
 
-Remove the entire folder containing the repository of the LoRaWAN Stack for VAS spplications:
+Remove the entire folder containing the repository of the LoRaWAN Stack for VAS applications:
 
     cd ~
 	sudo rm -rf ./LoRa_WAN-Server-Deploy
