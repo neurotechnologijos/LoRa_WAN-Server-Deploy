@@ -465,6 +465,8 @@ After that, VAS device should connect and activity should be seen in the “Even
 <p style="text-align: center;">Figure 8. LoRaWAN frames of the VAS device</p>
 
 ### 2.9. Connect the ChirpStack device to the ThingsBoard
+Currently, there are 8 devices and their corresponding dashboards pre-configured in ThingsBoard. The procedure provided in this section can be used to add more devices.
+
 First, device has to be created in the ThingsBoard.  
 * Open the Web GUI of the ThingsBoard by loading following web page:
     * https://thingsboard.vas.internal/
@@ -515,6 +517,10 @@ Set Device access token in ChirpStack:
 After that, device should connect to the ThinsBoard and its state should be “Active”, as shown in Figure 14.
 ![Active ThingsBoard device](Figures/14.png "Figure 14. Active ThingsBoard device")  
 <p style="text-align: center;">Figure 14. Active ThingsBoard device</p>
+
+ThingsBoard dashboards can be used for monitoring data received from VAS devices. There are many possibilities and capabilities for how these ThingsBoard dashboards can be configured—each dashboard can be populated with numerous widgets, offering flexibility and customization.
+
+As mentioned before, there are 8 pre-configured dashboards for each VAS device. However, users can create their own dashboards as described in the [ThingsBoard documentation](https://thingsboard.io/docs/user-guide/dashboards/).
 
 ## 3. Configuration of the LoRaWAN Gateway (RAK7289CV2 WisGate Edge Pro)
 Manufacturer’s quick start guide is available at:  
