@@ -642,7 +642,7 @@ Press the INSERT button on the keyboard.
 Append an entry for the domain name of the LoRaWAN server (replace the IP address with the correct one):
 
      #ChirpStack, mosquitto server
-     <IP_OF_THE_GATEWAY> chirpstack chirpstack.vas.internal mosquito
+     <IP_OF_THE_LORAWAN_CHIRPSTACK_SERVER> chirpstack chirpstack.vas.internal mosquito
 	 
 Save and quit vi editor by typing following combination:
 
