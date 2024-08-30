@@ -27,6 +27,10 @@ cfssl gencert -ca ca.pem -ca-key ca-key.pem -config ca-config.json -profile clie
 
 cfssl gencert -ca ca.pem -ca-key ca-key.pem -config ca-config.json -profile client chirpstack_client_EU433.json | cfssljson -bare chirpstack_client_EU433
 
+cfssl gencert -ca ca.pem -ca-key ca-key.pem -config ca-config.json -profile client chirpstack_client_IN865.json | cfssljson -bare chirpstack_client_IN865
+
+#cfssl gencert -ca ca.pem -ca-key ca-key.pem -config ca-config.json -profile client chirpstack_client_KZ865.json | cfssljson -bare chirpstack_client_KZ865
+
 chown $USERNAME:$USERNAME $MAIN_CERT_DIR/*
 
 #Remove old ChirpStack certificates:
@@ -34,7 +38,8 @@ rm -rf $CHIRPSTACK_CERT_DIR/*
 
 #Copy ChirpStack client certificates
 cd $MAIN_CERT_DIR
-cp ca.pem ca-key.pem chirpstack-key.pem chirpstack.pem chirpstack_client_EU433-key.pem chirpstack_client_EU433.pem chirpstack_client_EU868-key.pem chirpstack_client_EU868.pem  $CHIRPSTACK_CERT_DIR/
+cp ca.pem ca-key.pem chirpstack-key.pem chirpstack.pem chirpstack_client_EU433-key.pem chirpstack_client_EU433.pem chirpstack_client_EU868-key.pem chirpstack_client_EU868.pem chirpstack_client_IN865-key.pem chirpstack_client_IN865.pem $CHIRPSTACK_CERT_DIR/
+#cp ca.pem ca-key.pem chirpstack-key.pem chirpstack.pem chirpstack_client_EU433-key.pem chirpstack_client_EU433.pem chirpstack_client_EU868-key.pem chirpstack_client_EU868.pem chirpstack_client_IN865-key.pem chirpstack_client_IN865.pem chirpstack_client_KZ865-key.pem chirpstack_client_KZ865.pem $CHIRPSTACK_CERT_DIR/
 chown -R $USERNAME:$USERNAME $CHIRPSTACK_CERT_DIR
 chmod 664 $CHIRPSTACK_CERT_DIR/*
 

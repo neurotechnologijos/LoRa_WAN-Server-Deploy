@@ -70,7 +70,7 @@ Configuration of the firewall is not covered in this document.
 The gateway communicates with ChirpStack using an MQTT v3.1 Bridge with TLS encryption on port 8883.
 
 ### 1.3. LoRaWAN Network Server
-[ChirpStack v4](https://www.chirpstack.io) is used as the LoRaWAN Network Server. All of its components (chirpstack, chirpstack-rest-api, postgres, redis, mosquitto) are installed on Docker and are running using Docker Compose. Only the EU region is enabled for LoRaWAN communication.
+[ChirpStack v4](https://www.chirpstack.io) is used as the LoRaWAN Network Server. All of its components (chirpstack, chirpstack-rest-api, postgres, redis, mosquitto) are installed on Docker and are running using Docker Compose. Only the EU and IN regions are enabled for LoRaWAN communication.
 
 The LoRaWAN device repository has been imported into ChirpStack.
 
@@ -236,7 +236,7 @@ Fix permissions of the ThingsBoard and Kafka folders:
 ### 2.4. Regenerate TLS certificates
 There are pre-generated, self-signed TLS certificates for ChirpStack, Mosquitto, and Traefik in the provided repository. Nonetheless, it is recommended to regenerate them.
 Documentation on how to generate ChirpStack certificates is available [online](https://www.chirpstack.io/docs/guides/mosquitto-tls-configuration.html). However, pre-configured .json files and a helper script, which generates the needed certificates and places them in the correct locations, are provided in the repository.  
-**NOTE**: The provided helper script generates certificates only for the EU433 and EU868 LoRaWAN regions. If any other region is required, please refer to the [ChirpStack documentation](https://www.chirpstack.io/docs/guides/mosquitto-tls-configuration.html) and/or edit the provided configuration files and script according to your requirements.
+**NOTE**: The provided helper script generates certificates only for the EU433, EU868 and IN865 LoRaWAN regions. If any other region is required, please refer to the [ChirpStack documentation](https://www.chirpstack.io/docs/guides/mosquitto-tls-configuration.html) and/or edit the provided configuration files and script according to your requirements.
 
 Follow this procedure to regenerate the self-signed certificates for ChirpStack and Mosquitto:
 * Install [cfssl](https://github.com/cloudflare/cfssl) utility. For Debian and apt based operating systems following command can be used:
@@ -264,6 +264,10 @@ Follow this procedure to regenerate the self-signed certificates for ChirpStack 
 		* chirpstack_client_EU433.pem
 		* chirpstack_client_EU868-key.pem
 		* chirpstack_client_EU868.pem
+		* chirpstack_client_IN865-key.pem
+                * chirpstack_client_IN865.pem
+                * chirpstack_client_KZ865-key.pem
+                * chirpstack_client_KZ865.pem
 		* chirpstack-key.pem
 		* chirpstack.pem
 

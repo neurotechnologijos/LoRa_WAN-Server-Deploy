@@ -13,3 +13,11 @@ topic readwrite #
 # Give EU868 full access to everything
 user EU868
 topic readwrite #
+
+# Give IN865 full access to everything
+user IN865
+topic readwrite #
+
+# Give KZ865 full access to everything
+#user KZ865
+#topic readwrite #

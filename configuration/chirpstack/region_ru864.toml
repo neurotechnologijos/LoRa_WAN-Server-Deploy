@@ -38,7 +38,8 @@
         topic_prefix="ru864"
 
         # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
-        server="tcp://$MQTT_BROKER_HOST:1883"
+        #server="tcp://$MQTT_BROKER_HOST:1883"
+        server="ssl://$MQTT_BROKER_HOST:8883"
 
         # Connect with the given username (optional)
         username=""
@@ -81,14 +82,16 @@
         # Use this when setting up a secure connection (when server uses ssl://...)
         # but the certificate used by the server is not trusted by any CA certificate
         # on the server (e.g. when self generated).
-        ca_cert=""
+        #ca_cert=""
+        ca_cert="/etc/chirpstack/certs/ca.pem"
 
         # TLS certificate file (optional)
-        tls_cert=""
+        #tls_cert=""
+        tls_cert="/etc/chirpstack/certs/chirpstack_client_RU864.pem"
 
         # TLS key file (optional)
-        tls_key=""
-
+        #tls_key=""
+        tls_key="/etc/chirpstack/certs/chirpstack_client_RU864-key.pem"
 
     # Gateway channel configuration.
     #
