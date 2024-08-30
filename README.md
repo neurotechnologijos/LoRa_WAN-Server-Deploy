@@ -264,10 +264,8 @@ Follow this procedure to regenerate the self-signed certificates for ChirpStack 
 		* chirpstack_client_EU433.pem
 		* chirpstack_client_EU868-key.pem
 		* chirpstack_client_EU868.pem
-		* chirpstack_client_IN865-key.pem
+                * chirpstack_client_IN865-key.pem
                 * chirpstack_client_IN865.pem
-                * chirpstack_client_KZ865-key.pem
-                * chirpstack_client_KZ865.pem
 		* chirpstack-key.pem
 		* chirpstack.pem
 
