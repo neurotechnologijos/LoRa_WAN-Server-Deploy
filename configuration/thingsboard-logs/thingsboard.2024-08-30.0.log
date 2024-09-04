@@ -1,0 +1,340 @@
+2024-08-30 08:41:54,576 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.20.Final
+2024-08-30 08:41:54,652 [main] INFO  o.t.s.ThingsboardServerApplication - Starting ThingsboardServerApplication v3.6.4 using Java 11.0.22 on 7e1e50e87885 with PID 255 (/usr/share/thingsboard/bin/thingsboard.jar started by thingsboard in /)
+2024-08-30 08:41:54,654 [main] INFO  o.t.s.ThingsboardServerApplication - No active profile set, falling back to 1 default profile: "default"
+2024-08-30 08:42:00,237 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-30 08:42:00,238 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 08:42:00,622 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 362 ms. Found 1 JPA repository interfaces.
+2024-08-30 08:42:00,627 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-30 08:42:00,627 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 08:42:01,235 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 607 ms. Found 54 JPA repository interfaces.
+2024-08-30 08:42:01,238 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-08-30 08:42:01,238 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-30 08:42:01,290 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
+2024-08-30 08:42:02,478 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-08-30 08:42:02,515 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-08-30 08:42:04,082 [main] INFO  o.t.s.q.d.DefaultTbServiceInfoProvider - Current Service ID: 7e1e50e87885
+2024-08-30 08:42:05,991 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-30 08:42:06,171 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-08-30 08:42:06,715 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-30 08:42:07,018 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-30 08:42:07,232 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-30 08:42:07,276 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.thingsboard.server.dao.ThingsboardPostgreSQLDialect
+2024-08-30 08:42:10,431 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-30 08:42:10,489 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-30 08:42:16,512 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:16,708 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,205 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,234 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,258 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,283 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,348 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,370 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,429 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,470 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,508 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,544 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,565 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,591 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,612 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,683 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,688 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,695 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,709 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,714 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,720 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:17,726 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:18,142 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:18,179 [tb-queue-request-template-tb_transport.api.responses.7e1e50e87885-7-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_transport.api.responses.7e1e50e87885]
+2024-08-30 08:42:18,695 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2024-08-30 08:42:18,714 [main] INFO  o.a.coyote.http11.Http11NioProtocol - The ["http-nio-0.0.0.0-9090"] connector has been configured to support HTTP upgrade to [h2c]
+2024-08-30 08:42:18,715 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-9090"]
+2024-08-30 08:42:18,716 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-08-30 08:42:18,717 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-08-30 08:42:18,864 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-08-30 08:42:18,865 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 24128 ms
+2024-08-30 08:42:19,201 [main] INFO  o.t.s.d.a.CachedAttributesService - Going to use directExecutor for the local cache type caffeine
+2024-08-30 08:42:19,863 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.15.0
+2024-08-30 08:42:20,260 [Thingsboard Cluster-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Could not access native clock (see debug logs for details), falling back to Java system clock
+2024-08-30 08:42:21,026 [nosql-Read-dispatcher-13-thread-2] INFO  o.t.s.d.u.AbstractBufferedRateExecutor - [Read] Buffered rate executor thread started
+2024-08-30 08:42:21,027 [nosql-Read-dispatcher-13-thread-1] INFO  o.t.s.d.u.AbstractBufferedRateExecutor - [Read] Buffered rate executor thread started
+2024-08-30 08:42:21,038 [nosql-Write-dispatcher-15-thread-1] INFO  o.t.s.d.u.AbstractBufferedRateExecutor - [Write] Buffered rate executor thread started
+2024-08-30 08:42:21,039 [nosql-Write-dispatcher-15-thread-2] INFO  o.t.s.d.u.AbstractBufferedRateExecutor - [Write] Buffered rate executor thread started
+2024-08-30 08:42:22,317 [main] INFO  o.t.s.s.a.DefaultTbApiUsageStateService - Starting api usage service.
+2024-08-30 08:42:22,318 [main] INFO  o.t.s.s.a.DefaultTbApiUsageStateService - Started api usage service.
+2024-08-30 08:42:23,461 [main] WARN  o.a.k.c.admin.AdminClientConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:25,143 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:26,563 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: zookeeper.version=3.9.2-e454e8c7283100c7caec6dcae2bc82aaecb63023, built on 2024-02-12 20:59 UTC
+2024-08-30 08:42:26,563 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: host.name=7e1e50e87885
+2024-08-30 08:42:26,564 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.version=11.0.22
+2024-08-30 08:42:26,564 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.vendor=Debian
+2024-08-30 08:42:26,565 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.home=/usr/lib/jvm/java-11-openjdk-amd64
+2024-08-30 08:42:26,565 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.class.path=/usr/share/thingsboard/bin/thingsboard.jar
+2024-08-30 08:42:26,565 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2024-08-30 08:42:26,566 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.io.tmpdir=/tmp
+2024-08-30 08:42:26,566 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.compiler=<NA>
+2024-08-30 08:42:26,567 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.name=Linux
+2024-08-30 08:42:26,567 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.arch=amd64
+2024-08-30 08:42:26,567 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.version=6.1.0-18-amd64
+2024-08-30 08:42:26,568 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: user.name=thingsboard
+2024-08-30 08:42:26,568 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: user.home=/home/thingsboard
+2024-08-30 08:42:26,568 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: user.dir=/
+2024-08-30 08:42:26,569 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.memory.free=83MB
+2024-08-30 08:42:26,569 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.memory.max=1976MB
+2024-08-30 08:42:26,570 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.memory.total=375MB
+2024-08-30 08:42:26,678 [main] INFO  d.n.internal.NashornDetection - Delight-nashorn-sandbox detected that JDK Nashorn is present and standalone Nashorn is absent, and will use JDK Nashorn
+2024-08-30 08:42:27,564 [main] INFO  o.t.s.c.t.c.ssl.SslCredentialsConfig - LWM2M Server DTLS Credentials: Skipping initialization of disabled SSL credentials.
+2024-08-30 08:42:27,573 [main] INFO  o.t.s.c.t.c.ssl.SslCredentialsConfig - LWM2M Trust Credentials: Skipping initialization of disabled SSL credentials.
+2024-08-30 08:42:27,593 [main] INFO  o.t.s.c.t.c.ssl.SslCredentialsConfig - LWM2M Bootstrap DTLS Credentials: Skipping initialization of disabled SSL credentials.
+2024-08-30 08:42:28,021 [main] INFO  o.t.s.s.edge.rpc.EdgeGrpcService - Initializing Edge RPC service!
+2024-08-30 08:42:28,562 [main] INFO  o.t.s.s.edge.rpc.EdgeGrpcService - Going to start Edge RPC server using port: 7070
+2024-08-30 08:42:28,751 [main] INFO  o.t.s.s.edge.rpc.EdgeGrpcService - Edge RPC service initialized!
+2024-08-30 08:42:29,543 [main] INFO  o.t.s.c.SystemInfoController - System build info: {"version":"3.6.4","artifact":"application","name":"ThingsBoard Server Application"}
+2024-08-30 08:42:29,614 [main] INFO  o.t.s.s.e.EdgeEventSourcingListener - EdgeEventSourcingListener initiated
+2024-08-30 08:42:29,684 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:29,844 [main] INFO  o.t.s.a.service.DefaultActorService - Initializing actor system.
+2024-08-30 08:42:29,865 [main] INFO  o.t.s.a.service.DefaultActorService - Actor system initialized.
+2024-08-30 08:42:29,885 [main] INFO  o.t.s.c.adaptor.JsonConverterConfig - JSON type cast enabled = true
+2024-08-30 08:42:29,885 [main] INFO  o.t.s.c.adaptor.JsonConverterConfig - JSON max string value length = 0
+2024-08-30 08:42:29,950 [main] INFO  o.t.s.t.mqtt.MqttTransportService - Setting resource leak detector level to DISABLED
+2024-08-30 08:42:29,951 [main] INFO  o.t.s.t.mqtt.MqttTransportService - Starting MQTT transport...
+2024-08-30 08:42:29,986 [main] INFO  o.t.s.t.mqtt.MqttTransportService - Mqtt transport started!
+2024-08-30 08:42:30,025 [main] INFO  o.e.c.elements.config.Configuration - defaults added COAP.
+2024-08-30 08:42:30,040 [main] INFO  o.e.c.elements.config.Configuration - defaults added UDP.
+2024-08-30 08:42:30,041 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2024-08-30 08:42:30,067 [main] INFO  org.eclipse.californium.ban - Started.
+2024-08-30 08:42:30,070 [main] INFO  o.e.c.core.network.CoapEndpoint - coap CoapEndpoint uses udp context
+2024-08-30 08:42:30,088 [main] INFO  o.e.c.elements.config.Configuration - defaults added SYS.
+2024-08-30 08:42:30,089 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - coap BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2024-08-30 08:42:30,105 [main] INFO  o.e.californium.core.CoapServer - Starting server
+2024-08-30 08:42:30,121 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector starts up 1 sender threads and 1 receiver threads
+2024-08-30 08:42:30,126 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector listening on 0.0.0.0/0.0.0.0:5683, recv buf = 106496, send buf = 106496, recv packet size = 2048
+2024-08-30 08:42:30,127 [main] INFO  o.e.c.core.network.CoapEndpoint - coap Started endpoint at coap://0.0.0.0:5683
+2024-08-30 08:42:30,164 [main] INFO  o.t.s.t.coap.CoapTransportService - Starting CoAP transport...
+2024-08-30 08:42:30,172 [main] INFO  o.t.s.t.coap.CoapTransportService - CoAP transport started!
+2024-08-30 08:42:30,350 [main] INFO  o.e.c.elements.util.JceProviderUtil - Loaded net.i2p.crypto.eddsa.EdDSASecurityProvider
+2024-08-30 08:42:30,409 [main] INFO  o.t.s.t.l.b.LwM2MTransportBootstrapService - Starting LwM2M transport bootstrap server...
+2024-08-30 08:42:30,573 [main] INFO  o.e.c.elements.config.Configuration - defaults added DTLS.
+2024-08-30 08:42:30,573 [main] INFO  o.t.s.t.l.b.LwM2MTransportBootstrapService - Unable to load X509 files for BootStrap Server
+2024-08-30 08:42:30,699 [main] WARN  o.e.l.s.c.b.LeshanBootstrapServerBuilder - configStore is set but you also provide a custom SessionManager so this store will not be used
+2024-08-30 08:42:30,788 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2024-08-30 08:42:30,788 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M BS Server-coap://] CoapEndpoint uses udp context
+2024-08-30 08:42:30,788 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - [LWM2M BS Server-coap://] BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2024-08-30 08:42:30,813 [main] INFO  o.e.c.s.dtls.InMemoryConnectionStore - Created new InMemoryConnectionStore [capacity: 150000, connection expiration threshold: 1800s]
+2024-08-30 08:42:30,815 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2024-08-30 08:42:30,816 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M BS Server-coaps://] CoapEndpoint uses lwm2m correlation
+2024-08-30 08:42:30,816 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - [LWM2M BS Server-coaps://] BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2024-08-30 08:42:30,828 [main] INFO  o.e.californium.core.CoapServer - Starting server
+2024-08-30 08:42:30,836 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector starts up 2 sender threads and 2 receiver threads
+2024-08-30 08:42:30,838 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector listening on 0.0.0.0/0.0.0.0:5687, recv buf = 106496, send buf = 106496, recv packet size = 2048
+2024-08-30 08:42:30,838 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M BS Server-coap://] Started endpoint at coap://0.0.0.0:5687
+2024-08-30 08:42:30,841 [main] INFO  o.e.c.scandium.DTLSConnector - multiple network interfaces, using smallest MTU [IPv4 1500, IPv6 1280]
+2024-08-30 08:42:30,843 [main] INFO  o.e.c.scandium.DTLSConnector - DTLSConnector listening on 0.0.0.0/0.0.0.0:5688, recv buf = 106496, send buf = 106496, recv packet size = 16490, MTU = IPv4 1500 / IPv6 1280
+2024-08-30 08:42:30,843 [DTLS-Receiver-0-0.0.0.0/0.0.0.0:5688] INFO  o.e.c.scandium.DTLSConnector - Starting worker thread [DTLS-Receiver-0-0.0.0.0/0.0.0.0:5688]
+2024-08-30 08:42:30,844 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M BS Server-coaps://] Started endpoint at coaps://0.0.0.0:5688
+2024-08-30 08:42:30,844 [main] INFO  o.e.l.s.c.b.LeshanBootstrapServer - Bootstrap server started at coap://0.0.0.0/0.0.0.0:5687 coaps://0.0.0.0/0.0.0.0:5688
+2024-08-30 08:42:30,844 [main] INFO  o.t.s.t.l.b.LwM2MTransportBootstrapService - Started LwM2M transport bootstrap server.
+2024-08-30 08:42:30,985 [main] INFO  o.t.s.t.s.s.SnmpTransportService - SNMP transport service initialized
+2024-08-30 08:42:31,861 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-08-30 08:42:32,572 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure Or [Ant [pattern='/*.js'], Ant [pattern='/*.css'], Ant [pattern='/*.ico'], Ant [pattern='/assets/**'], Ant [pattern='/static/**']] with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ca08575, org.springframework.security.web.header.HeaderWriterFilter@aa9b6a8, org.springframework.security.web.csrf.CsrfFilter@761eaf72, org.springframework.security.web.authentication.logout.LogoutFilter@68212585, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@162304e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1cbe3497, org.springframework.security.web.access.ExceptionTranslationFilter@6c88026b, org.springframework.security.web.access.intercept.AuthorizationFilter@2dadadd9]
+2024-08-30 08:42:32,807 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1e42841a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30464500, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e584389, org.springframework.security.web.header.HeaderWriterFilter@7e98be9f, org.springframework.web.filter.CorsFilter@3e9c59ed, org.springframework.security.web.authentication.logout.LogoutFilter@56653a4d, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@253a2bfa, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1c175d38, org.thingsboard.server.service.security.auth.rest.RestLoginProcessingFilter@2f0b7b6d, org.thingsboard.server.service.security.auth.rest.RestPublicLoginProcessingFilter@1766b7, org.thingsboard.server.service.security.auth.jwt.JwtTokenAuthenticationProcessingFilter@60219a32, org.thingsboard.server.service.security.auth.jwt.RefreshTokenProcessingFilter@56f3f9da, org.thingsboard.server.config.RateLimitProcessingFilter@5e05064b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@732af580, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40bf2ead, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63792a7a, org.springframework.security.web.session.SessionManagementFilter@1f607db6, org.springframework.security.web.access.ExceptionTranslationFilter@2f38b35e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4d7143de]
+2024-08-30 08:42:32,879 [main] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'session.timeout.ms' was supplied but isn't a known config.
+2024-08-30 08:42:33,313 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-08-30 08:42:34,279 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-08-30 08:42:34,279 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+2024-08-30 08:42:34,280 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2024-08-30 08:42:34,280 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-9090"]
+2024-08-30 08:42:34,308 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+2024-08-30 08:42:41,779 [TB-Scheduling-1] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2024-08-30 08:42:41,788 [main] INFO  o.t.s.ThingsboardServerApplication - Started ThingsboardServerApplication in 48.335 seconds (JVM running for 50.014)
+2024-08-30 08:42:41,809 [main] INFO  o.t.s.q.d.HashPartitionService - Recalculating partitions
+2024-08-30 08:42:41,809 [main] INFO  o.t.s.q.d.HashPartitionService - [7e1e50e87885] Found common server: [TB_CORE, TB_RULE_ENGINE, TB_TRANSPORT, JS_EXECUTOR, TB_VC_EXECUTOR]
+2024-08-30 08:42:41,831 [main] INFO  o.t.s.q.d.HashPartitionService - Partitions changed: 
+[QK(Main,TB_CORE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2024-08-30 08:42:41,842 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] CURRENT PARTITIONS: []
+2024-08-30 08:42:41,842 [api-usage-scheduled-23-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] CURRENT PARTITIONS: []
+2024-08-30 08:42:41,843 [api-usage-scheduled-23-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] NEW PARTITIONS: [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[5], fullTopicName=tb_core.5, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[6], fullTopicName=tb_core.6, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[3], fullTopicName=tb_core.3, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[4], fullTopicName=tb_core.4, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[1], fullTopicName=tb_core.1, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[2], fullTopicName=tb_core.2, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[0], fullTopicName=tb_core.0, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[9], fullTopicName=tb_core.9, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[7], fullTopicName=tb_core.7, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[8], fullTopicName=tb_core.8, myPartition=true)]
+2024-08-30 08:42:41,855 [api-usage-scheduled-23-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] ADDED PARTITIONS: [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[5], fullTopicName=tb_core.5, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[6], fullTopicName=tb_core.6, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[3], fullTopicName=tb_core.3, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[4], fullTopicName=tb_core.4, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[1], fullTopicName=tb_core.1, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[2], fullTopicName=tb_core.2, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[0], fullTopicName=tb_core.0, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[9], fullTopicName=tb_core.9, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[7], fullTopicName=tb_core.7, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[8], fullTopicName=tb_core.8, myPartition=true)]
+2024-08-30 08:42:41,855 [api-usage-scheduled-23-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] REMOVED PARTITIONS: []
+2024-08-30 08:42:41,843 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] NEW PARTITIONS: [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[5], fullTopicName=tb_core.5, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[6], fullTopicName=tb_core.6, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[3], fullTopicName=tb_core.3, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[4], fullTopicName=tb_core.4, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[1], fullTopicName=tb_core.1, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[2], fullTopicName=tb_core.2, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[0], fullTopicName=tb_core.0, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[9], fullTopicName=tb_core.9, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[7], fullTopicName=tb_core.7, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[8], fullTopicName=tb_core.8, myPartition=true)]
+2024-08-30 08:42:41,857 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] ADDED PARTITIONS: [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[5], fullTopicName=tb_core.5, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[6], fullTopicName=tb_core.6, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[3], fullTopicName=tb_core.3, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[4], fullTopicName=tb_core.4, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[1], fullTopicName=tb_core.1, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[2], fullTopicName=tb_core.2, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[0], fullTopicName=tb_core.0, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[9], fullTopicName=tb_core.9, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[7], fullTopicName=tb_core.7, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[8], fullTopicName=tb_core.8, myPartition=true)]
+2024-08-30 08:42:41,857 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] REMOVED PARTITIONS: []
+2024-08-30 08:42:41,860 [api-usage-scheduled-23-thread-1] INFO  o.t.s.s.a.DefaultTbApiUsageStateService - Initializing tenant states.
+2024-08-30 08:42:41,876 [main] INFO  o.t.s.s.q.DefaultTbCoreConsumerService - Subscribing to partitions: [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[5], fullTopicName=tb_core.5, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[6], fullTopicName=tb_core.6, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[3], fullTopicName=tb_core.3, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[4], fullTopicName=tb_core.4, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[1], fullTopicName=tb_core.1, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[2], fullTopicName=tb_core.2, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[0], fullTopicName=tb_core.0, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[9], fullTopicName=tb_core.9, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[7], fullTopicName=tb_core.7, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[8], fullTopicName=tb_core.8, myPartition=true)]
+2024-08-30 08:42:41,877 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] CURRENT PARTITIONS: []
+2024-08-30 08:42:41,878 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] NEW PARTITIONS: [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[5], fullTopicName=tb_core.5, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[6], fullTopicName=tb_core.6, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[3], fullTopicName=tb_core.3, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[4], fullTopicName=tb_core.4, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[1], fullTopicName=tb_core.1, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[2], fullTopicName=tb_core.2, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[0], fullTopicName=tb_core.0, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[9], fullTopicName=tb_core.9, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[7], fullTopicName=tb_core.7, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[8], fullTopicName=tb_core.8, myPartition=true)]
+2024-08-30 08:42:41,878 [main] INFO  o.t.s.a.service.DefaultActorService - Received partition change event.
+2024-08-30 08:42:41,878 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] ADDED PARTITIONS: [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[5], fullTopicName=tb_core.5, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[6], fullTopicName=tb_core.6, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[3], fullTopicName=tb_core.3, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[4], fullTopicName=tb_core.4, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[1], fullTopicName=tb_core.1, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[2], fullTopicName=tb_core.2, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[0], fullTopicName=tb_core.0, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[9], fullTopicName=tb_core.9, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[7], fullTopicName=tb_core.7, myPartition=true), TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[8], fullTopicName=tb_core.8, myPartition=true)]
+2024-08-30 08:42:41,878 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] REMOVED PARTITIONS: []
+2024-08-30 08:42:41,879 [main] INFO  o.t.s.q.d.HashPartitionService - Partitions changed: 
+[QK(HighPriority,TB_RULE_ENGINE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[QK(SequentialByOriginator,TB_RULE_ENGINE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[QK(Main,TB_RULE_ENGINE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2024-08-30 08:42:41,883 [main] INFO  o.t.s.a.service.DefaultActorService - Received partition change event.
+2024-08-30 08:42:41,884 [main] INFO  o.t.s.q.d.HashPartitionService - Partitions changed: 
+[QK(Main,TB_VC_EXECUTOR,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2024-08-30 08:42:41,885 [main] INFO  o.t.s.t.s.s.SnmpTransportBalancingService - Recalculating partitions for SNMP transports
+2024-08-30 08:42:41,886 [main] INFO  o.t.s.t.s.s.SnmpTransportBalancingService - SNMP transports partitions have not changed
+2024-08-30 08:42:41,906 [vc-consumer-59-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_version_control.8, tb_version_control.9, tb_version_control.6, tb_version_control.7, tb_version_control.4, tb_version_control.5, tb_version_control.2, tb_version_control.3, tb_version_control.0, tb_version_control.1]
+2024-08-30 08:42:41,969 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] Managing following partitions:
+2024-08-30 08:42:41,970 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.5]: 0 entities
+2024-08-30 08:42:41,970 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.6]: 0 entities
+2024-08-30 08:42:41,970 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.3]: 0 entities
+2024-08-30 08:42:41,972 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.4]: 0 entities
+2024-08-30 08:42:41,972 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.1]: 0 entities
+2024-08-30 08:42:41,975 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.2]: 0 entities
+2024-08-30 08:42:41,975 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.0]: 0 entities
+2024-08-30 08:42:41,975 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.9]: 0 entities
+2024-08-30 08:42:41,975 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.7]: 0 entities
+2024-08-30 08:42:41,975 [notifications-scheduler-43-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.8]: 0 entities
+2024-08-30 08:42:42,091 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[5], fullTopicName=tb_core.5, myPartition=true)] Submit task for device states: 3
+2024-08-30 08:42:42,102 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[4], fullTopicName=tb_core.4, myPartition=true)] Submit task for device states: 1
+2024-08-30 08:42:42,106 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[1], fullTopicName=tb_core.1, myPartition=true)] Submit task for device states: 4
+2024-08-30 08:42:42,107 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[2], fullTopicName=tb_core.2, myPartition=true)] Submit task for device states: 4
+2024-08-30 08:42:42,107 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[0], fullTopicName=tb_core.0, myPartition=true)] Submit task for device states: 3
+2024-08-30 08:42:42,107 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[7], fullTopicName=tb_core.7, myPartition=true)] Submit task for device states: 1
+2024-08-30 08:42:42,108 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [TopicPartitionInfo(topic=tb_core, tenantId=Optional[13814000-1dd2-11b2-8080-808080808080], partition=Optional[8], fullTopicName=tb_core.8, myPartition=true)] Submit task for device states: 3
+2024-08-30 08:42:42,172 [device-state-2-2] INFO  o.t.s.s.s.DefaultDeviceStateService - [4] Initialized 1 out of 1 device states
+2024-08-30 08:42:42,172 [device-state-1-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [5] Initialized 3 out of 3 device states
+2024-08-30 08:42:42,173 [device-state-3-3] INFO  o.t.s.s.s.DefaultDeviceStateService - [1] Initialized 4 out of 4 device states
+2024-08-30 08:42:42,179 [device-state-0-4] INFO  o.t.s.s.s.DefaultDeviceStateService - [2] Initialized 4 out of 4 device states
+2024-08-30 08:42:42,189 [device-state-3-3] INFO  o.t.s.s.s.DefaultDeviceStateService - [7] Initialized 1 out of 1 device states
+2024-08-30 08:42:42,189 [device-state-1-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [8] Initialized 3 out of 3 device states
+2024-08-30 08:42:42,192 [device-state-2-2] INFO  o.t.s.s.s.DefaultDeviceStateService - [0] Initialized 3 out of 3 device states
+2024-08-30 08:42:42,193 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] Managing following partitions:
+2024-08-30 08:42:42,193 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.5]: 3 entities
+2024-08-30 08:42:42,193 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.6]: 0 entities
+2024-08-30 08:42:42,193 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.3]: 0 entities
+2024-08-30 08:42:42,194 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.4]: 1 entities
+2024-08-30 08:42:42,194 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.1]: 4 entities
+2024-08-30 08:42:42,194 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.2]: 4 entities
+2024-08-30 08:42:42,194 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.0]: 3 entities
+2024-08-30 08:42:42,194 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.9]: 0 entities
+2024-08-30 08:42:42,195 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.7]: 1 entities
+2024-08-30 08:42:42,195 [device-state-2-2] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.8]: 3 entities
+2024-08-30 08:42:42,230 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] Managing following partitions:
+2024-08-30 08:42:42,231 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.5]: 1 entities
+2024-08-30 08:42:42,231 [main] INFO  o.t.s.a.service.DefaultActorService - Received application ready event. Sending application init message to actor system
+2024-08-30 08:42:42,231 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.6]: 0 entities
+2024-08-30 08:42:42,232 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.3]: 0 entities
+2024-08-30 08:42:42,232 [app-dispatcher-58-thread-1] INFO  o.t.server.actors.app.AppActor - Starting main system actor.
+2024-08-30 08:42:42,232 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.4]: 0 entities
+2024-08-30 08:42:42,233 [main] INFO  o.t.s.s.t.TbCoreTransportApiService - Received application ready event. Starting polling for events.
+2024-08-30 08:42:42,234 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.1]: 0 entities
+2024-08-30 08:42:42,234 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.2]: 0 entities
+2024-08-30 08:42:42,235 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.0]: 0 entities
+2024-08-30 08:42:42,235 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.9]: 0 entities
+2024-08-30 08:42:42,235 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.7]: 0 entities
+2024-08-30 08:42:42,235 [DbCallbackExecutorService-57-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.8]: 0 entities
+2024-08-30 08:42:42,242 [app-dispatcher-58-thread-1] INFO  o.t.server.actors.app.AppActor - Main system actor started.
+2024-08-30 08:42:42,248 [main] INFO  o.t.s.s.q.p.AbstractConsumerService - Subscribing to notifications: tb_core.notifications.7e1e50e87885
+2024-08-30 08:42:42,249 [tb-queue-response-template-loop-tb_transport.api.requests-47-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_transport.api.requests]
+2024-08-30 08:42:42,255 [tb-core-notifications-consumer-48-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_core.notifications.7e1e50e87885]
+2024-08-30 08:42:42,267 [tb-core-consumer-49-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_core.5, tb_core.6, tb_core.3, tb_core.4, tb_core.1, tb_core.2, tb_core.0, tb_core.9, tb_core.7, tb_core.8]
+2024-08-30 08:42:42,290 [tb-core-usage-stats-consumer-50-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_usage_stats.3, tb_usage_stats.4, tb_usage_stats.5, tb_usage_stats.6, tb_usage_stats.0, tb_usage_stats.1, tb_usage_stats.2, tb_usage_stats.7, tb_usage_stats.8, tb_usage_stats.9]
+2024-08-30 08:42:42,292 [main] INFO  o.t.s.s.q.p.AbstractConsumerService - Subscribing to notifications: tb_rule_engine.notifications.7e1e50e87885
+2024-08-30 08:42:42,302 [tb-core-firmware-notifications-consumer-51-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_ota_package]
+2024-08-30 08:42:42,302 [tb-rule-engine-notifications-consumer-55-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.notifications.7e1e50e87885]
+2024-08-30 08:42:42,318 [main] INFO  o.t.s.t.l.s.DefaultLwM2mTransportService - Unable to load X509 files for LWM2MServer
+2024-08-30 08:42:42,320 [transport-consumer-8-thread-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_transport.notifications.7e1e50e87885]
+2024-08-30 08:42:42,323 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2024-08-30 08:42:42,323 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M Server-coap://] CoapEndpoint uses udp context
+2024-08-30 08:42:42,324 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - [LWM2M Server-coap://] BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2024-08-30 08:42:42,324 [main] INFO  o.e.c.s.dtls.InMemoryConnectionStore - Created new InMemoryConnectionStore [capacity: 150000, connection expiration threshold: 1800s]
+2024-08-30 08:42:42,324 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2024-08-30 08:42:42,326 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M Server-coaps://] CoapEndpoint uses lwm2m correlation
+2024-08-30 08:42:42,326 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - [LWM2M Server-coaps://] BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2024-08-30 08:42:42,365 [main] INFO  o.t.s.t.l.s.DefaultLwM2mTransportService - Starting LwM2M transport server...
+2024-08-30 08:42:42,366 [main] INFO  o.e.californium.core.CoapServer - Starting server
+2024-08-30 08:42:42,372 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector starts up 2 sender threads and 2 receiver threads
+2024-08-30 08:42:42,382 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector listening on 0.0.0.0/0.0.0.0:5685, recv buf = 106496, send buf = 106496, recv packet size = 2048
+2024-08-30 08:42:42,383 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M Server-coap://] Started endpoint at coap://0.0.0.0:5685
+2024-08-30 08:42:42,384 [main] INFO  o.e.c.scandium.DTLSConnector - multiple network interfaces, using smallest MTU [IPv4 1500, IPv6 1280]
+2024-08-30 08:42:42,385 [DTLS-Receiver-0-0.0.0.0/0.0.0.0:5686] INFO  o.e.c.scandium.DTLSConnector - Starting worker thread [DTLS-Receiver-0-0.0.0.0/0.0.0.0:5686]
+2024-08-30 08:42:42,386 [main] INFO  o.e.c.scandium.DTLSConnector - DTLSConnector listening on 0.0.0.0/0.0.0.0:5686, recv buf = 106496, send buf = 106496, recv packet size = 16490, MTU = IPv4 1500 / IPv6 1280
+2024-08-30 08:42:42,387 [DTLS-Receiver-1-0.0.0.0/0.0.0.0:5686] INFO  o.e.c.scandium.DTLSConnector - Starting worker thread [DTLS-Receiver-1-0.0.0.0/0.0.0.0:5686]
+2024-08-30 08:42:42,387 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M Server-coaps://] Started endpoint at coaps://0.0.0.0:5686
+2024-08-30 08:42:42,387 [main] INFO  o.e.l.s.californium.LeshanServer - LWM2M server started at coap://0.0.0.0/0.0.0.0:5685 coaps://0.0.0.0/0.0.0.0:5686
+2024-08-30 08:42:42,392 [main] INFO  o.t.s.t.l.s.DefaultLwM2mTransportService - Started LwM2M transport server.
+2024-08-30 08:42:42,392 [main] INFO  o.t.s.t.snmp.SnmpTransportContext - Initializing SNMP devices sessions
+2024-08-30 08:42:42,448 [rule-dispatcher-5-5] INFO  c.d.oss.driver.api.core.uuid.Uuids - PID obtained through JMX: 255
+2024-08-30 08:42:42,461 [rule-dispatcher-5-5] INFO  o.t.s.d.s.i.s.SqlPartitioningRepository - Saving partition 1724889600000-1725494400000 for table lc_event
+2024-08-30 08:42:42,904 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)] Added partitions: [tb_rule_engine.hp.9, tb_rule_engine.hp.7, tb_rule_engine.hp.8, tb_rule_engine.hp.5, tb_rule_engine.hp.6, tb_rule_engine.hp.3, tb_rule_engine.hp.4, tb_rule_engine.hp.1, tb_rule_engine.hp.2, tb_rule_engine.hp.0], removed partitions: []
+2024-08-30 08:42:42,914 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)] Added partitions: [tb_rule_engine.main.8, tb_rule_engine.main.9, tb_rule_engine.main.6, tb_rule_engine.main.7, tb_rule_engine.main.4, tb_rule_engine.main.5, tb_rule_engine.main.2, tb_rule_engine.main.3, tb_rule_engine.main.0, tb_rule_engine.main.1], removed partitions: []
+2024-08-30 08:42:42,922 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)] Added partitions: [tb_rule_engine.sq.9, tb_rule_engine.sq.8, tb_rule_engine.sq.7, tb_rule_engine.sq.2, tb_rule_engine.sq.1, tb_rule_engine.sq.0, tb_rule_engine.sq.6, tb_rule_engine.sq.5, tb_rule_engine.sq.4, tb_rule_engine.sq.3], removed partitions: []
+2024-08-30 08:42:42,939 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-9] Launching consumer
+2024-08-30 08:42:42,954 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-8] Launching consumer
+2024-08-30 08:42:42,955 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-9] Launching consumer
+2024-08-30 08:42:42,962 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-7] Launching consumer
+2024-08-30 08:42:42,963 [tb-rule-engine-consumer-53-thread-3 | QK(HighPriority,TB_RULE_ENGINE,system)-9] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.9]
+2024-08-30 08:42:42,975 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-9] Launching consumer
+2024-08-30 08:42:42,977 [tb-rule-engine-consumer-53-thread-2 | QK(Main,TB_RULE_ENGINE,system)-8] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.8]
+2024-08-30 08:42:42,985 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-8] Launching consumer
+2024-08-30 08:42:42,986 [tb-rule-engine-consumer-53-thread-1 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-9] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.9]
+2024-08-30 08:42:43,001 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-7] Launching consumer
+2024-08-30 08:42:43,001 [tb-rule-engine-consumer-53-thread-6 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-8] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.8]
+2024-08-30 08:42:43,021 [tb-rule-engine-consumer-53-thread-5 | QK(Main,TB_RULE_ENGINE,system)-9] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.9]
+2024-08-30 08:42:43,025 [tb-rule-engine-consumer-53-thread-7 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-7] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.7]
+2024-08-30 08:42:43,031 [tb-rule-engine-consumer-53-thread-4 | QK(HighPriority,TB_RULE_ENGINE,system)-7] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.7]
+2024-08-30 08:42:43,037 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-8] Launching consumer
+2024-08-30 08:42:43,045 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-6] Launching consumer
+2024-08-30 08:42:43,048 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-2] Launching consumer
+2024-08-30 08:42:43,054 [tb-rule-engine-consumer-53-thread-10 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-2] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.2]
+2024-08-30 08:42:43,066 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-1] Launching consumer
+2024-08-30 08:42:43,082 [tb-rule-engine-consumer-53-thread-11 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.1]
+2024-08-30 08:42:43,089 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-0] Launching consumer
+2024-08-30 08:42:43,117 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-7] Launching consumer
+2024-08-30 08:42:43,118 [tb-rule-engine-consumer-53-thread-9 | QK(Main,TB_RULE_ENGINE,system)-6] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.6]
+2024-08-30 08:42:43,143 [tb-rule-engine-consumer-53-thread-13 | QK(Main,TB_RULE_ENGINE,system)-7] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.7]
+2024-08-30 08:42:43,145 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-5] Launching consumer
+2024-08-30 08:42:43,146 [tb-rule-engine-consumer-53-thread-8 | QK(HighPriority,TB_RULE_ENGINE,system)-8] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.8]
+2024-08-30 08:42:43,174 [tb-rule-engine-consumer-53-thread-12 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-0] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.0]
+2024-08-30 08:42:43,175 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-4] Launching consumer
+2024-08-30 08:42:43,180 [tb-rule-engine-consumer-53-thread-15 | QK(Main,TB_RULE_ENGINE,system)-4] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.4]
+2024-08-30 08:42:43,182 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-5] Launching consumer
+2024-08-30 08:42:43,186 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-6] Launching consumer
+2024-08-30 08:42:43,198 [tb-rule-engine-consumer-53-thread-17 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-6] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.6]
+2024-08-30 08:42:43,199 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-6] Launching consumer
+2024-08-30 08:42:43,199 [tb-rule-engine-consumer-53-thread-16 | QK(Main,TB_RULE_ENGINE,system)-5] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.5]
+2024-08-30 08:42:43,203 [tb-rule-engine-consumer-53-thread-14 | QK(HighPriority,TB_RULE_ENGINE,system)-5] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.5]
+2024-08-30 08:42:43,209 [tb-rule-engine-consumer-53-thread-18 | QK(HighPriority,TB_RULE_ENGINE,system)-6] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.6]
+2024-08-30 08:42:43,212 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-3] Launching consumer
+2024-08-30 08:42:43,216 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-2] Launching consumer
+2024-08-30 08:42:43,229 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-5] Launching consumer
+2024-08-30 08:42:43,235 [tb-rule-engine-consumer-53-thread-20 | QK(Main,TB_RULE_ENGINE,system)-2] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.2]
+2024-08-30 08:42:43,239 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-3] Launching consumer
+2024-08-30 08:42:43,240 [tb-rule-engine-consumer-53-thread-19 | QK(HighPriority,TB_RULE_ENGINE,system)-3] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.3]
+2024-08-30 08:42:43,246 [tb-rule-engine-consumer-53-thread-22 | QK(Main,TB_RULE_ENGINE,system)-3] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.3]
+2024-08-30 08:42:43,247 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-4] Launching consumer
+2024-08-30 08:42:43,254 [tb-rule-engine-consumer-53-thread-21 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-5] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.5]
+2024-08-30 08:42:43,265 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-4] Launching consumer
+2024-08-30 08:42:43,267 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-0] Launching consumer
+2024-08-30 08:42:43,285 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-1] Launching consumer
+2024-08-30 08:42:43,286 [tb-rule-engine-consumer-53-thread-23 | QK(HighPriority,TB_RULE_ENGINE,system)-4] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.4]
+2024-08-30 08:42:43,291 [tb-rule-engine-consumer-53-thread-25 | QK(Main,TB_RULE_ENGINE,system)-0] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.0]
+2024-08-30 08:42:43,293 [tb-rule-engine-consumer-53-thread-24 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-4] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.4]
+2024-08-30 08:42:43,298 [tb-rule-engine-mgmt-2-2] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-3] Launching consumer
+2024-08-30 08:42:43,299 [tb-rule-engine-consumer-53-thread-26 | QK(HighPriority,TB_RULE_ENGINE,system)-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.1]
+2024-08-30 08:42:43,303 [tb-rule-engine-consumer-53-thread-27 | QK(SequentialByOriginator,TB_RULE_ENGINE,system)-3] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.sq.3]
+2024-08-30 08:42:43,310 [tb-rule-engine-mgmt-11-3] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-1] Launching consumer
+2024-08-30 08:42:43,313 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-2] Launching consumer
+2024-08-30 08:42:43,325 [tb-rule-engine-consumer-53-thread-29 | QK(HighPriority,TB_RULE_ENGINE,system)-2] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.2]
+2024-08-30 08:42:43,330 [tb-rule-engine-mgmt-9-1] INFO  o.t.s.s.q.r.TbRuleEngineQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-0] Launching consumer
+2024-08-30 08:42:43,333 [tb-rule-engine-consumer-53-thread-28 | QK(Main,TB_RULE_ENGINE,system)-1] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.main.1]
+2024-08-30 08:42:43,335 [tb-rule-engine-consumer-53-thread-30 | QK(HighPriority,TB_RULE_ENGINE,system)-0] INFO  o.t.s.q.c.AbstractTbQueueConsumerTemplate - Subscribing to topics [tb_rule_engine.hp.0]
+2024-08-30 08:42:45,138 [sql-log-1-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-0 [Events] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2024-08-30 08:42:45,141 [sql-log-1-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [Events] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2024-08-30 08:42:45,142 [sql-log-1-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Events] queueSize [0] totalAdded [3] totalSaved [3] totalFailed [0]
+2024-08-30 08:42:45,326 [tb-core-notifications-consumer-48-thread-1] INFO  o.t.s.s.q.DefaultTbCoreConsumerService - [7e1e50e87885] Processing core startup with partitions: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2024-08-30 08:42:45,328 [DefaultTbLocalSubscriptionService-25-1] INFO  o.t.s.s.s.DefaultTbLocalSubscriptionService - [7e1e50e87885] Pushed 0 subscriptions to [7e1e50e87885]
+2024-08-30 08:42:51,298 [sql-log-1-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-0 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2024-08-30 08:42:51,784 [TB-Scheduling-1] INFO  o.t.s.d.u.AbstractBufferedRateExecutor - [Write] Permits queueSize = [0] totalAdded = [14] totalLaunched = [14] totalReleased = [14] totalFailed = [0] totalExpired = [0] totalRejected = [0] totalRateLimited = [0] totalRateLimitedTenants = [0] currBuffer = [0] 
+2024-08-30 08:43:41,777 [TB-Scheduling-3] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2024-08-30 08:43:41,779 [TB-Scheduling-2] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2024-08-30 08:43:41,780 [TB-Scheduling-3] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5c6c4190-f64c-11ee-8f58-c9c802dda3de]: calls: 36, failures: 0, exec time: 353 
+2024-08-30 08:43:41,780 [TB-Scheduling-3] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5c6c4190-f64c-11ee-8f58-c9c802dda3de] Top 3 methods by timing:
+2024-08-30 08:43:41,781 [TB-Scheduling-3] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5c6c4190-f64c-11ee-8f58-c9c802dda3de]: method: JpaAbstractDao.findById(..), calls: 31, failures: 0, exec time: 248
+2024-08-30 08:43:41,781 [TB-Scheduling-3] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5c6c4190-f64c-11ee-8f58-c9c802dda3de]: method: JpaNotificationRuleDao.findByTenantIdAndTriggerTypeAndEnabled(..), calls: 1, failures: 0, exec time: 55
+2024-08-30 08:43:41,781 [TB-Scheduling-3] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5c6c4190-f64c-11ee-8f58-c9c802dda3de]: method: JpaRelationDao.findAllByFrom(..), calls: 2, failures: 0, exec time: 35
+2024-08-30 08:43:41,785 [TB-Scheduling-2] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [1] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [0] claimDevice = [0] deviceState = [0] subMsgs = [0] edgeNfs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] coreNfOther = [1] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfEdgeUpd = [0] coreNfEdgeSyncReq = [0] coreNfEdgeSyncResp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2024-08-30 08:43:51,298 [sql-log-1-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-0 [TS Latest] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2024-08-30 08:43:51,786 [TB-Scheduling-1] INFO  o.t.s.d.u.AbstractBufferedRateExecutor - [Write] Permits queueSize = [0] totalAdded = [15] totalLaunched = [15] totalReleased = [15] totalFailed = [0] totalExpired = [0] totalRejected = [0] totalRateLimited = [0] totalRateLimitedTenants = [0] currBuffer = [0] 
