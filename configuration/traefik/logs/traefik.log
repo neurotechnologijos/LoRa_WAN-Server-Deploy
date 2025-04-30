@@ -39083,3 +39083,75 @@ time="2024-10-04T12:53:08+03:00" level=error msg="close tcp [::]:80: use of clos
 time="2024-10-04T12:53:08+03:00" level=error msg="close tcp [::]:443: use of closed network connection" entryPointName=https
 time="2024-10-04T12:53:08+03:00" level=info msg="Server stopped"
 time="2024-10-04T12:53:08+03:00" level=info msg="Shutting down"
+time="2024-10-17T14:23:56+03:00" level=info msg="Traefik version 2.11.2 built on 2024-04-11T15:38:45Z"
+time="2024-10-17T14:23:56+03:00" level=info msg="\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://doc.traefik.io/traefik/contributing/data-collection/\n"
+time="2024-10-17T14:23:56+03:00" level=info msg="Starting provider aggregator aggregator.ProviderAggregator"
+time="2024-10-17T14:23:56+03:00" level=info msg="Starting provider *file.Provider"
+time="2024-10-17T14:23:56+03:00" level=info msg="Starting provider *traefik.Provider"
+time="2024-10-17T14:23:56+03:00" level=info msg="Starting provider *docker.Provider"
+time="2024-10-17T14:23:56+03:00" level=info msg="Starting provider *acme.ChallengeTLSALPN"
+time="2024-10-17T14:23:56+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.4\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/traefik\"." providerName=docker container=traefik-lora-wan-server-deploy-9a4b7fa286bb015228e0f98ffa742d9a576f176aa8e571e7e1c4f24100a47bc7 serviceName=traefik-lora-wan-server-deploy
+time="2024-10-17T14:23:56+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.3\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/lora_wan-server-deploy-chirpstack-1\"." serviceName=chirpstack providerName=docker container=chirpstack-lora-wan-server-deploy-5550a22a414fa44ce4fe2594ce7e215ceaf2da4c63cc3fc4f5e1b761401df7cd
+time="2024-10-17T14:23:56+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.2\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/lora_wan-server-deploy-thingsboard-1\"." container=thingsboard-lora-wan-server-deploy-8bf44eaa779619ff33d6cf38447caee26a1770afb4badec7b7209ec928e95c82 serviceName=thingsboard providerName=docker
+time="2024-10-17T14:33:23+03:00" level=info msg="I have to go..."
+time="2024-10-17T14:33:23+03:00" level=info msg="Stopping server gracefully"
+time="2024-10-17T14:33:24+03:00" level=error msg="accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2024-10-17T14:33:24+03:00" level=error msg="accept tcp [::]:443: use of closed network connection" entryPointName=https
+time="2024-10-17T14:33:24+03:00" level=error msg="close tcp [::]:80: use of closed network connection" entryPointName=http
+time="2024-10-17T14:33:24+03:00" level=error msg="close tcp [::]:443: use of closed network connection" entryPointName=https
+time="2024-10-17T14:33:24+03:00" level=info msg="Server stopped"
+time="2024-10-17T14:33:24+03:00" level=info msg="Shutting down"
+time="2024-10-17T14:43:18+03:00" level=info msg="Traefik version 2.11.2 built on 2024-04-11T15:38:45Z"
+time="2024-10-17T14:43:18+03:00" level=info msg="\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://doc.traefik.io/traefik/contributing/data-collection/\n"
+time="2024-10-17T14:43:18+03:00" level=info msg="Starting provider aggregator aggregator.ProviderAggregator"
+time="2024-10-17T14:43:18+03:00" level=info msg="Starting provider *file.Provider"
+time="2024-10-17T14:43:18+03:00" level=info msg="Starting provider *traefik.Provider"
+time="2024-10-17T14:43:18+03:00" level=info msg="Starting provider *docker.Provider"
+time="2024-10-17T14:43:18+03:00" level=info msg="Starting provider *acme.ChallengeTLSALPN"
+time="2024-10-17T14:43:18+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.4\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/traefik\"." providerName=docker container=traefik-lora-wan-server-deploy-9a4b7fa286bb015228e0f98ffa742d9a576f176aa8e571e7e1c4f24100a47bc7 serviceName=traefik-lora-wan-server-deploy
+time="2024-10-17T14:43:18+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.2\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/lora_wan-server-deploy-chirpstack-1\"." serviceName=chirpstack providerName=docker container=chirpstack-lora-wan-server-deploy-5550a22a414fa44ce4fe2594ce7e215ceaf2da4c63cc3fc4f5e1b761401df7cd
+time="2024-10-17T14:43:18+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.3\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/lora_wan-server-deploy-thingsboard-1\"." providerName=docker container=thingsboard-lora-wan-server-deploy-8bf44eaa779619ff33d6cf38447caee26a1770afb4badec7b7209ec928e95c82 serviceName=thingsboard
+time="2024-10-17T14:52:31+03:00" level=info msg="I have to go..."
+time="2024-10-17T14:52:31+03:00" level=info msg="Stopping server gracefully"
+time="2024-10-17T14:52:31+03:00" level=error msg="accept tcp [::]:443: use of closed network connection" entryPointName=https
+time="2024-10-17T14:52:31+03:00" level=error msg="Error while starting server: accept tcp [::]:443: use of closed network connection" entryPointName=https
+time="2024-10-17T14:52:31+03:00" level=error msg="accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2024-10-17T14:52:31+03:00" level=error msg="Error while starting server: accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2024-10-17T14:52:31+03:00" level=info msg="Server stopped"
+time="2024-10-17T14:52:31+03:00" level=info msg="Shutting down"
+time="2025-04-30T13:54:07+03:00" level=info msg="Traefik version 2.11.2 built on 2024-04-11T15:38:45Z"
+time="2025-04-30T13:54:07+03:00" level=info msg="\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://doc.traefik.io/traefik/contributing/data-collection/\n"
+time="2025-04-30T13:54:07+03:00" level=info msg="Starting provider aggregator aggregator.ProviderAggregator"
+time="2025-04-30T13:54:07+03:00" level=info msg="Starting provider *file.Provider"
+time="2025-04-30T13:54:07+03:00" level=info msg="Starting provider *traefik.Provider"
+time="2025-04-30T13:54:07+03:00" level=info msg="Starting provider *docker.Provider"
+time="2025-04-30T13:54:07+03:00" level=info msg="Starting provider *acme.ChallengeTLSALPN"
+time="2025-04-30T13:54:07+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.4\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/traefik\"." serviceName=traefik-lora-wan-server-deploy providerName=docker container=traefik-lora-wan-server-deploy-9a4b7fa286bb015228e0f98ffa742d9a576f176aa8e571e7e1c4f24100a47bc7
+time="2025-04-30T13:54:07+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.3\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/lora_wan-server-deploy-chirpstack-1\"." container=chirpstack-lora-wan-server-deploy-5550a22a414fa44ce4fe2594ce7e215ceaf2da4c63cc3fc4f5e1b761401df7cd providerName=docker serviceName=chirpstack
+time="2025-04-30T13:54:07+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.2\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/lora_wan-server-deploy-thingsboard-1\"." providerName=docker container=thingsboard-lora-wan-server-deploy-8bf44eaa779619ff33d6cf38447caee26a1770afb4badec7b7209ec928e95c82 serviceName=thingsboard
+time="2025-04-30T13:56:30+03:00" level=info msg="I have to go..."
+time="2025-04-30T13:56:30+03:00" level=info msg="Stopping server gracefully"
+time="2025-04-30T13:56:30+03:00" level=error msg="accept tcp [::]:443: use of closed network connection" entryPointName=https
+time="2025-04-30T13:56:30+03:00" level=error msg="close tcp [::]:443: use of closed network connection" entryPointName=https
+time="2025-04-30T13:56:30+03:00" level=error msg="accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2025-04-30T13:56:30+03:00" level=error msg="Error while starting server: accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2025-04-30T13:56:30+03:00" level=info msg="Server stopped"
+time="2025-04-30T13:56:30+03:00" level=info msg="Shutting down"
+time="2025-04-30T13:57:04+03:00" level=info msg="Traefik version 2.11.2 built on 2024-04-11T15:38:45Z"
+time="2025-04-30T13:57:04+03:00" level=info msg="\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://doc.traefik.io/traefik/contributing/data-collection/\n"
+time="2025-04-30T13:57:04+03:00" level=info msg="Starting provider aggregator aggregator.ProviderAggregator"
+time="2025-04-30T13:57:04+03:00" level=info msg="Starting provider *file.Provider"
+time="2025-04-30T13:57:04+03:00" level=info msg="Starting provider *traefik.Provider"
+time="2025-04-30T13:57:04+03:00" level=info msg="Starting provider *docker.Provider"
+time="2025-04-30T13:57:04+03:00" level=info msg="Starting provider *acme.ChallengeTLSALPN"
+time="2025-04-30T13:57:04+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.4\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/traefik\"." serviceName=traefik-lora-wan-server-deploy providerName=docker container=traefik-lora-wan-server-deploy-9a4b7fa286bb015228e0f98ffa742d9a576f176aa8e571e7e1c4f24100a47bc7
+time="2025-04-30T13:57:04+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.3\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/lora_wan-server-deploy-chirpstack-1\"." providerName=docker container=chirpstack-lora-wan-server-deploy-5550a22a414fa44ce4fe2594ce7e215ceaf2da4c63cc3fc4f5e1b761401df7cd serviceName=chirpstack
+time="2025-04-30T13:57:04+03:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_proxy\" \"172.23.0.2\" '\\x00' \"\" \"f013f4496f3f3b30b17ce7f0594dfec65baaa253c647f68c7ce859815963890d\"}) for container \"/lora_wan-server-deploy-thingsboard-1\"." serviceName=thingsboard providerName=docker container=thingsboard-lora-wan-server-deploy-8bf44eaa779619ff33d6cf38447caee26a1770afb4badec7b7209ec928e95c82
+time="2025-04-30T14:00:55+03:00" level=info msg="I have to go..."
+time="2025-04-30T14:00:55+03:00" level=info msg="Stopping server gracefully"
+time="2025-04-30T14:00:55+03:00" level=error msg="accept tcp [::]:443: use of closed network connection" entryPointName=https
+time="2025-04-30T14:00:55+03:00" level=error msg="Error while starting server: accept tcp [::]:443: use of closed network connection" entryPointName=https
+time="2025-04-30T14:00:55+03:00" level=error msg="accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2025-04-30T14:00:55+03:00" level=error msg="Error while starting server: accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2025-04-30T14:00:55+03:00" level=info msg="Server stopped"
+time="2025-04-30T14:00:55+03:00" level=info msg="Shutting down"
