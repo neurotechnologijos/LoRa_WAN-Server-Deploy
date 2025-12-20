@@ -280,7 +280,7 @@ Follow this procedure to regenerate the self-signed certificates for ChirpStack 
 
 Helper script and configuration file to generate Traefik self-signed wildcard certificate for  `*vas.internal` domain are also provided in the repository.  
 Follow this procedure to regenerate Traefik certificate:
-* Change directory, where provided helper script to generate ChirpStack certificates is stored:
+* Change directory, where provided helper script to generate Traefik certificates is stored:
 
       cd ~/LoRa_WAN-Server-Deploy/configuration/traefik/SelfSignedCerts
 * Make helper script executable:
