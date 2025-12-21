@@ -191,10 +191,8 @@ services:
       - 443:443
     volumes:
       - /etc/localtime:/etc/localtime:ro
-#     #Default socket
-#      - /var/run/docker.sock:/var/run/docker.sock:ro
-#     # We Are running rootless:
-      - $XDG_RUNTIME_DIR/docker.sock:/var/run/docker.sock:ro
+      #Default socket
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./configuration/traefik/traefik.yml:/traefik.yml:ro
       - ./configuration/traefik/configs:/configs:ro
       - ./configuration/traefik/acme.json:/acme.json:rw
