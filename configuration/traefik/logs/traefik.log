@@ -39215,3 +39215,23 @@ time="2025-12-20T13:11:16+02:00" level=error msg="accept tcp [::]:80: use of clo
 time="2025-12-20T13:11:16+02:00" level=error msg="Error while starting server: accept tcp [::]:80: use of closed network connection" entryPointName=http
 time="2025-12-20T13:11:16+02:00" level=info msg="Server stopped"
 time="2025-12-20T13:11:16+02:00" level=info msg="Shutting down"
+time="2025-12-22T17:26:17+02:00" level=warning msg="Starting with v2.11.32, Traefik now rejects some encoded characters in the request path by default. Refer to the documentation for more details: https://doc.traefik.io/traefik/v2.11/migration/v2/#encoded-characters-in-request-path"
+time="2025-12-22T17:26:17+02:00" level=info msg="Traefik version 2.11.33 built on 2025-12-17T10:03:19Z"
+time="2025-12-22T17:26:17+02:00" level=info msg="\nStats collection is disabled.\nHelp us improve Traefik by turning this feature on :)\nMore details on: https://doc.traefik.io/traefik/contributing/data-collection/\n"
+time="2025-12-22T17:26:17+02:00" level=info msg="Starting provider aggregator *aggregator.ProviderAggregator"
+time="2025-12-22T17:26:17+02:00" level=info msg="Starting provider *file.Provider"
+time="2025-12-22T17:26:17+02:00" level=info msg="Starting provider *traefik.Provider"
+time="2025-12-22T17:26:17+02:00" level=info msg="Starting provider *docker.Provider"
+time="2025-12-22T17:26:17+02:00" level=info msg="Starting provider *acme.ChallengeTLSALPN"
+time="2025-12-22T17:26:17+02:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_bck_2025_12_20_proxy\" \"172.18.0.4\" '\\x00' \"\" \"2d925bb7a6207a9edc87550a789c3de4a231415c2aa5bc3bdd6628fa481af8b5\"}) for container \"/traefik\"." providerName=docker container=traefik-lora-wan-server-deploy-bck-2025-12-20-f80644032eddecf5120866fd2ec7d944ff82c9e5ccfde447011bce08496930a4 serviceName=traefik-lora-wan-server-deploy-bck-2025-12-20
+time="2025-12-22T17:26:17+02:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_bck_2025_12_20_vasnetwork\" \"172.19.0.7\" '\\x00' \"\" \"6f4f21ebdfa01b89136b73c3f69be9e4c836cafdcd9f9e817d5686c6f99d9ad1\"}) for container \"/lora_wan-server-deploy_bck_2025_12_20-chirpstack-1\"." providerName=docker container=chirpstack-lora-wan-server-deploy-bck-2025-12-20-798241c0bca8db3d259c5a1258c0937c0ed41ea58f9e41f0c1e67431c6a74130 serviceName=chirpstack
+time="2025-12-22T17:26:17+02:00" level=warning msg="Defaulting to first available network (&{\"lora_wan-server-deploy_bck_2025_12_20_proxy\" \"172.18.0.3\" '\\x00' \"\" \"2d925bb7a6207a9edc87550a789c3de4a231415c2aa5bc3bdd6628fa481af8b5\"}) for container \"/lora_wan-server-deploy_bck_2025_12_20-thingsboard-1\"." container=thingsboard-lora-wan-server-deploy-bck-2025-12-20-a202f400e8382a4bb74de12bb9384bc889f4d868bf6a2f932d14bdf8f1e1af28 serviceName=thingsboard providerName=docker
+time="2025-12-22T17:36:17+02:00" level=warning msg="A new release of Traefik has been found: 3.6.5. Please consider updating."
+time="2025-12-22T17:38:30+02:00" level=info msg="I have to go..."
+time="2025-12-22T17:38:30+02:00" level=info msg="Stopping server gracefully"
+time="2025-12-22T17:38:30+02:00" level=error msg="accept tcp [::]:443: use of closed network connection" entryPointName=https
+time="2025-12-22T17:38:30+02:00" level=error msg="accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2025-12-22T17:38:30+02:00" level=error msg="Error while starting server: accept tcp [::]:443: use of closed network connection" entryPointName=https
+time="2025-12-22T17:38:30+02:00" level=info msg="Server stopped"
+time="2025-12-22T17:38:30+02:00" level=error msg="Error while starting server: accept tcp [::]:80: use of closed network connection" entryPointName=http
+time="2025-12-22T17:38:30+02:00" level=info msg="Shutting down"
