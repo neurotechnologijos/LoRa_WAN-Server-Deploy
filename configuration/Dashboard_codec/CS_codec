@@ -1,0 +1,230 @@
+//// Decode uplink function.
+//  //
+//  // Input is an object with the following fields:
+//  // - bytes = Byte array containing the uplink payload, e.g. [255, 230, 255, 0]
+//  // - fPort = Uplink fPort.
+//  // - variables = Object containing the configured device variables.
+//  //
+//  // Output must be an object with the following fields:
+//  // - data = Object representing the decoded payload.
+//   function decodeUplink(input) {
+//      var bytes = input.bytes;
+//      var decoded = {};
+//      ///var rawInput = bytes;
+//      var rawInput = bytes.map(byte => byte.toString(16).padStart(2, '0')).join('');
+//      
+//      var index = 0;
+//     
+//      decoded.RAW = rawInput;
+//
+//      decoded.group = bytes[index++];
+//      decoded.subgroup = bytes[index++];
+//  
+//      decoded.EstPE_x = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.EstPE_y = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.EstPE_z = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.EstPE_s = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//  
+//      decoded.MBS_x = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.MBS_y = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.MBS_z = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.MBS_s = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//  
+//      decoded.LBS_x = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.LBS_y = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.LBS_z = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.LBS_s = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//     
+//      decoded.p2p_x = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.p2p_y = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.p2p_z = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.p2p_s = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//
+//      decoded.RMS_x = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.RMS_y = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.RMS_z = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.RMS_s = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//  
+//      decoded.CrF_x = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.CrF_y = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.CrF_z = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//      decoded.CrF_s = (bytes[index++] | bytes[index++] << 8) / 100.0;
+//  
+//      decoded.Temperature = bytes[index++];
+//      decoded.Appearance_Mode = bytes[index++]; // Interpret as signed 8-bit integer
+//     
+//	  decoded.time_sec_mbs = (bytes[index++] | (bytes[index++] << 8) | (bytes[index++] << 16) | (bytes[index++] << 24));
+//	  decoded.time_sec_lbs = (bytes[index++] | (bytes[index++] << 8) | (bytes[index++] << 16) | (bytes[index++] << 24));
+//	  decoded.Seconds = (bytes[index++] | (bytes[index++] << 8) | (bytes[index++] << 16) | (bytes[index++] << 24));
+//   
+//      // Helper function to convert seconds into days, hours, minutes, seconds
+//      function convertSecondsToDHms(seconds) {
+//         var days = Math.floor(seconds / (24 * 3600));
+//         seconds %= 24 * 3600;
+//         var hours = Math.floor(seconds / 3600);
+//         seconds %= 3600;
+//         var minutes = Math.floor(seconds / 60);
+//         seconds %= 60;
+//         
+//         return `${days}D ${hours}H ${minutes}m ${seconds}s`;
+//      }
+//   
+//      // Convert time_sec_mbs to days, hours, minutes, seconds format
+//      decoded.time_sec_mbs_decoded = convertSecondsToDHms(decoded.time_sec_mbs);
+//         
+//      // Convert time_sec_lbs to days, hours, minutes, seconds format
+//      decoded.time_sec_lbs_decoded = convertSecondsToDHms(decoded.time_sec_lbs);
+//         
+//      // Convert Seconds to ISO/UTC format
+//      decoded.Seconds_decoded = new Date(decoded.Seconds * 1000).toISOString();
+//
+//      return {
+//         data: decoded,
+//         warnings: [],
+//         errors: []
+//      };
+//   }
+//
+//   function removeLastChar(str) {
+//      return str.slice(0, -1);
+//   }
+//  
+//  //// Encode downlink function.
+//  ////
+//  //// Input is an object with the following fields:
+//  //// - data = Object representing the payload that must be encoded.
+//  //// - variables = Object containing the configured device variables.
+//  ////
+//  //// Output must be an object with the following fields:
+//  //// - bytes = Byte array containing the downlink payload.
+//  //function encodeDownlink(input) {
+//  //  return {
+//  //    bytes: [225, 230, 255, 0]
+//  //  };
+//  //}
+
+
+
+// New version (with computing the new values like a total's amounts)
+//
+// Decode uplink function.
+//
+// Input:
+//  - bytes: Byte array containing uplink payload
+//  - fPort: Uplink fPort
+//  - variables: device variables
+//
+// Output:
+//  - data: decoded fields
+function decodeUplink(input) {
+  var bytes = input.bytes || [];
+  var decoded = {};
+  var index = 0;
+
+  // RAW hex string (unchanged behavior)
+  decoded.RAW = bytes.map(b => b.toString(16).padStart(2, "0")).join("");
+
+  // Helpers (do NOT change payload order; only make reading safer)
+  function need(n) {
+    return (index + n) <= bytes.length;
+  }
+  function u8() {
+    if (!need(1)) throw new Error("Payload too short at index=" + index);
+    return bytes[index++] & 0xFF;
+  }
+  function u16le() {
+    if (!need(2)) throw new Error("Payload too short at index=" + index);
+    var v = (bytes[index] | (bytes[index + 1] << 8)) >>> 0;
+    index += 2;
+    return v;
+  }
+  function u32le() {
+    if (!need(4)) throw new Error("Payload too short at index=" + index);
+    // force unsigned 32-bit
+    var v = (
+      (bytes[index]) |
+      (bytes[index + 1] << 8) |
+      (bytes[index + 2] << 16) |
+      (bytes[index + 3] << 24)
+    ) >>> 0;
+    index += 4;
+    return v;
+  }
+
+  // Helper: RMS total for 3 axes
+  function totalRms3(x, y, z) {
+    return Math.sqrt((x * x + y * y + z * z) / 3.0);
+  }
+
+  // --- Decode (PAYLOAD ORDER UNCHANGED) ---
+  try {
+    decoded.group = u8();
+    decoded.subgroup = u8();
+
+    decoded.EstPE_x = u16le() / 100.0;
+    decoded.EstPE_y = u16le() / 100.0;
+    decoded.EstPE_z = u16le() / 100.0;
+    decoded.EstPE_s = u16le() / 100.0;
+
+    decoded.MBS_x = u16le() / 100.0;
+    decoded.MBS_y = u16le() / 100.0;
+    decoded.MBS_z = u16le() / 100.0;
+    decoded.MBS_s = u16le() / 100.0;
+
+    decoded.LBS_x = u16le() / 100.0;
+    decoded.LBS_y = u16le() / 100.0;
+    decoded.LBS_z = u16le() / 100.0;
+    decoded.LBS_s = u16le() / 100.0;
+
+    decoded.p2p_x = u16le() / 100.0;
+    decoded.p2p_y = u16le() / 100.0;
+    decoded.p2p_z = u16le() / 100.0;
+    decoded.p2p_s = u16le() / 100.0;
+
+    decoded.RMS_x = u16le() / 100.0;
+    decoded.RMS_y = u16le() / 100.0;
+    decoded.RMS_z = u16le() / 100.0;
+    decoded.RMS_s = u16le() / 100.0;
+
+    decoded.CrF_x = u16le() / 100.0;
+    decoded.CrF_y = u16le() / 100.0;
+    decoded.CrF_z = u16le() / 100.0;
+    decoded.CrF_s = u16le() / 100.0;
+
+    decoded.Temperature = u8();
+    decoded.Appearance_Mode = u8(); // оставлено как было (0..255), чтобы ничего не ломать
+
+    decoded.time_sec_mbs = u32le();
+    decoded.time_sec_lbs = u32le();
+    decoded.Seconds = u32le();
+
+    // --- NEW computed fields (no payload changes) ---
+    decoded.EstPE_total = totalRms3(decoded.EstPE_x, decoded.EstPE_y, decoded.EstPE_z);
+    decoded.MBS_total   = totalRms3(decoded.MBS_x,   decoded.MBS_y,   decoded.MBS_z);
+    decoded.LBS_total   = totalRms3(decoded.LBS_x,   decoded.LBS_y,   decoded.LBS_z);
+
+    // Helper: convert seconds to D/H/m/s
+    function convertSecondsToDHms(seconds) {
+      var days = Math.floor(seconds / (24 * 3600));
+      seconds %= (24 * 3600);
+      var hours = Math.floor(seconds / 3600);
+      seconds %= 3600;
+      var minutes = Math.floor(seconds / 60);
+      seconds %= 60;
+      return `${days}D ${hours}H ${minutes}m ${seconds}s`;
+    }
+
+    decoded.time_sec_mbs_decoded = convertSecondsToDHms(decoded.time_sec_mbs);
+    decoded.time_sec_lbs_decoded = convertSecondsToDHms(decoded.time_sec_lbs);
+    decoded.Seconds_decoded = new Date(decoded.Seconds * 1000).toISOString();
+
+    return { data: decoded, warnings: [], errors: [] };
+  } catch (e) {
+    return { data: decoded, warnings: [], errors: [String(e && e.message ? e.message : e)] };
+  }
+}
+
+// оставил как было (хотя сейчас не используется)
+function removeLastChar(str) {
+  return str.slice(0, -1);
+}
